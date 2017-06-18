@@ -18,7 +18,9 @@ namespace
 		if (!attributeValue)
 		{
 			const std::string taskType = element->Value();
-			throw("Node \"" + taskType + "\" is missing the \"" + attributeName + "\" attribute. Line " + std::to_string(element->Row()));
+			throw std::exception((
+				"Node \"" + taskType + "\" is missing the \"" + attributeName + "\" attribute. Line " + std::to_string(element->Row()
+			)).c_str());
 		}
 		return attributeValue;
 	}
@@ -63,7 +65,14 @@ std::shared_ptr<Task> TreeFactory::createBehaviorTree(const std::string& rootNam
 	auto it = m_rootMap.find(rootName);
 	if (it != m_rootMap.end())
 	{
-		task = createTreeForElement(it->second);
+		try
+		{
+			task = createTreeForElement(it->second);
+		}
+		catch (std::exception e)
+		{
+			LOG_ERROR("The TreeFactory encountered an exception while creating ROOT task named \"" + rootName + "\": " + e.what());
+		}
 	}
 	else
 	{
@@ -79,7 +88,7 @@ std::shared_ptr<Task> TreeFactory::createTreeForElement(TiXmlElement* element) c
 	
 	if (!task)
 	{
-		throw("Creating behavior tree failed at line " + element->Row());
+		throw std::exception(("Creating behavior tree at line " + std::to_string(element->Row()) + "failed.").c_str());
 	}
 
 	if (std::shared_ptr<Composite> composite = std::dynamic_pointer_cast<Composite>(task))

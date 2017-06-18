@@ -1,4 +1,4 @@
-#include "behavior_tree/module_core/TaskSequence.h"
+#include "behavior_tree/task/TaskSequence.h"
 
 TaskSequence::TaskSequence()
 {

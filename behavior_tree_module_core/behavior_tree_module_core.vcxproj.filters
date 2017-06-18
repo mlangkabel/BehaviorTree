@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{01bdf4f7-7816-4b04-97a6-f203e16dc7f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree">
+      <UniqueIdentifier>{1e2191ac-8c39-4a24-8158-eb9f11b79808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\task">
+      <UniqueIdentifier>{f905bfe7-c795-430d-a68b-01d0c2d3ad27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\factory">
+      <UniqueIdentifier>{d393c556-9942-4769-b079-d7634ca421e7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleCore.cpp">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\TaskRoot.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\TaskSelector.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\TaskSequence.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleCore.h">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\TaskRoot.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\TaskSelector.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\TaskSequence.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

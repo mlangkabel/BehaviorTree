@@ -1,6 +1,7 @@
+#include <windows.h>
+
 #include "behavior_tree/data/Blackboard.h"
 #include "behavior_tree/factory/TreeFactory.h"
-#include "behavior_tree/module_core/TreeFactoryModuleCore.h"
 #include "behavior_tree/task/Task.h"
 #include "utility/logging/ConsoleLogger.h"
 #include "utility/logging/logging.h"
@@ -13,7 +14,7 @@ int main()
 
 	LOG_INFO("Starting up application.");
 
-	TreeFactory treeFactory(TextAccess::createFromString(
+	std::shared_ptr<TreeFactory> treeFactory = std::make_shared<TreeFactory>(TextAccess::createFromString(
 		"<TREES>"
 		"	<ROOT name = \"main\">"
 		"		<SEQUENCE>"
@@ -22,9 +23,26 @@ int main()
 		"</TREES>"
 	));
 
-	treeFactory.addModule(std::make_shared<TreeFactoryModuleCore>());
-	
-	std::shared_ptr<Task> tree = treeFactory.createBehaviorTree("main");
+	{
+		HINSTANCE hGetProcIDDLL = LoadLibrary("behavior_tree_module_core.dll");
+
+		if (!hGetProcIDDLL) {
+			LOG_WARNING("could not load the dynamic library");
+			return EXIT_FAILURE;
+		}
+
+		typedef void(*functionType)(std::shared_ptr<TreeFactory>);
+
+		functionType function = (functionType)GetProcAddress(hGetProcIDDLL, "registerModule");
+		if (!function) {
+			LOG_WARNING("could not locate the function");
+			return EXIT_FAILURE;
+		}
+
+		function(treeFactory);
+	}
+
+	std::shared_ptr<Task> tree = treeFactory->createBehaviorTree("main");
 
 	std::shared_ptr<Blackboard> blackboard = std::make_shared<Blackboard>();
 
@@ -34,6 +52,6 @@ int main()
 
 	LOG_INFO("Shutting down application.");
 
-	return 0;
+	return EXIT_SUCCESS;
 }
 
