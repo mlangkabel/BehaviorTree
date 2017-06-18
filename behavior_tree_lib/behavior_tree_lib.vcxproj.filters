@@ -4,15 +4,174 @@
     <Filter Include="src">
       <UniqueIdentifier>{25447bb4-b82c-4dca-a907-855566108961}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\utility">
+      <UniqueIdentifier>{71388dca-9ab7-4a48-8f4e-ac21f72b95de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\logging">
+      <UniqueIdentifier>{53486071-56b6-4e7c-a5f9-6ef85ed71d29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\behavior_tree">
+      <UniqueIdentifier>{28578dce-5bae-46ab-bdb1-9a2497de8918}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{3d314e71-4035-4399-9944-10c9b50dd497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\tinyxml">
+      <UniqueIdentifier>{863b7fe5-116b-4bd1-a63a-102354a19380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\behavior_tree\task">
+      <UniqueIdentifier>{50152e12-f154-4e1e-9f16-f078863a32d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\behavior_tree\data">
+      <UniqueIdentifier>{0422b69e-8c87-41ee-a735-e0b43befcea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\behavior_tree\factory">
+      <UniqueIdentifier>{e137fb43-7929-4e30-a21c-5071b9024a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility\behavior_tree\module_core">
+      <UniqueIdentifier>{b833b6e9-00c2-4ac9-a174-1b6cdf85e479}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\TestClass.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="src\utility\logging\Logger.cpp">
+      <Filter>src\utility\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\logging\LogManager.cpp">
+      <Filter>src\utility\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\logging\LogManagerImplementation.cpp">
+      <Filter>src\utility\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\logging\ConsoleLogger.cpp">
+      <Filter>src\utility\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\logging\FileLogger.cpp">
+      <Filter>src\utility\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\UtilityString.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="external\tinyxml\tinystr.cpp">
+      <Filter>external\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="external\tinyxml\tinyxml.cpp">
+      <Filter>external\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="external\tinyxml\tinyxmlerror.cpp">
+      <Filter>external\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="external\tinyxml\tinyxmlparser.cpp">
+      <Filter>external\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\data\Blackboard.cpp">
+      <Filter>src\utility\behavior_tree\data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\Action.cpp">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\Composite.cpp">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\Decorator.cpp">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\Task.cpp">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\factory\TreeFactory.cpp">
+      <Filter>src\utility\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\TextAccess.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\factory\TaskFactory.cpp">
+      <Filter>src\utility\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModule.cpp">
+      <Filter>src\utility\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\module_core\TaskRoot.cpp">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\module_core\TaskSelector.cpp">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\module_core\TaskSequence.cpp">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\module_core\TreeFactoryModuleCore.cpp">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\TestClass.h">
-      <Filter>src</Filter>
+    <ClInclude Include="src\utility\logging\FileLogger.h">
+      <Filter>src\utility\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\logging\Logger.h">
+      <Filter>src\utility\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\logging\logging.h">
+      <Filter>src\utility\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\logging\LogManager.h">
+      <Filter>src\utility\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\logging\LogManagerImplementation.h">
+      <Filter>src\utility\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\logging\LogMessage.h">
+      <Filter>src\utility\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\logging\ConsoleLogger.h">
+      <Filter>src\utility\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\UtilityString.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="external\tinyxml\tinystr.h">
+      <Filter>external\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="external\tinyxml\tinyxml.h">
+      <Filter>external\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\data\Blackboard.h">
+      <Filter>src\utility\behavior_tree\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\Action.h">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\Composite.h">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\Decorator.h">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\Task.h">
+      <Filter>src\utility\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\factory\TreeFactory.h">
+      <Filter>src\utility\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\TextAccess.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\factory\TaskFactory.h">
+      <Filter>src\utility\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModule.h">
+      <Filter>src\utility\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\module_core\TaskRoot.h">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\module_core\TaskSelector.h">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\module_core\TaskSequence.h">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\module_core\TreeFactoryModuleCore.h">
+      <Filter>src\utility\behavior_tree\module_core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -19,10 +19,54 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\TestClass.cpp" />
+    <ClCompile Include="external\tinyxml\tinystr.cpp" />
+    <ClCompile Include="external\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="external\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="external\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="src\behavior_tree\data\Blackboard.cpp" />
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModule.cpp" />
+    <ClCompile Include="src\behavior_tree\factory\TaskFactory.cpp" />
+    <ClCompile Include="src\behavior_tree\factory\TreeFactory.cpp" />
+    <ClCompile Include="src\behavior_tree\module_core\TreeFactoryModuleCore.cpp" />
+    <ClCompile Include="src\behavior_tree\module_core\TaskRoot.cpp" />
+    <ClCompile Include="src\behavior_tree\module_core\TaskSelector.cpp" />
+    <ClCompile Include="src\behavior_tree\module_core\TaskSequence.cpp" />
+    <ClCompile Include="src\behavior_tree\task\Action.cpp" />
+    <ClCompile Include="src\behavior_tree\task\Composite.cpp" />
+    <ClCompile Include="src\behavior_tree\task\Decorator.cpp" />
+    <ClCompile Include="src\behavior_tree\task\Task.cpp" />
+    <ClCompile Include="src\utility\logging\ConsoleLogger.cpp" />
+    <ClCompile Include="src\utility\logging\FileLogger.cpp" />
+    <ClCompile Include="src\utility\logging\Logger.cpp" />
+    <ClCompile Include="src\utility\logging\LogManager.cpp" />
+    <ClCompile Include="src\utility\logging\LogManagerImplementation.cpp" />
+    <ClCompile Include="src\utility\TextAccess.cpp" />
+    <ClCompile Include="src\utility\UtilityString.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\TestClass.h" />
+    <ClInclude Include="external\tinyxml\tinystr.h" />
+    <ClInclude Include="external\tinyxml\tinyxml.h" />
+    <ClInclude Include="src\behavior_tree\data\Blackboard.h" />
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModule.h" />
+    <ClInclude Include="src\behavior_tree\factory\TaskFactory.h" />
+    <ClInclude Include="src\behavior_tree\factory\TreeFactory.h" />
+    <ClInclude Include="src\behavior_tree\module_core\TreeFactoryModuleCore.h" />
+    <ClInclude Include="src\behavior_tree\module_core\TaskRoot.h" />
+    <ClInclude Include="src\behavior_tree\module_core\TaskSelector.h" />
+    <ClInclude Include="src\behavior_tree\module_core\TaskSequence.h" />
+    <ClInclude Include="src\behavior_tree\task\Action.h" />
+    <ClInclude Include="src\behavior_tree\task\Composite.h" />
+    <ClInclude Include="src\behavior_tree\task\Decorator.h" />
+    <ClInclude Include="src\behavior_tree\task\Task.h" />
+    <ClInclude Include="src\utility\logging\ConsoleLogger.h" />
+    <ClInclude Include="src\utility\logging\FileLogger.h" />
+    <ClInclude Include="src\utility\logging\Logger.h" />
+    <ClInclude Include="src\utility\logging\logging.h" />
+    <ClInclude Include="src\utility\logging\LogManager.h" />
+    <ClInclude Include="src\utility\logging\LogManagerImplementation.h" />
+    <ClInclude Include="src\utility\logging\LogMessage.h" />
+    <ClInclude Include="src\utility\TextAccess.h" />
+    <ClInclude Include="src\utility\UtilityString.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E57FAD6B-8D19-4651-9388-0A96639CDF58}</ProjectGuid>
@@ -98,7 +142,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;BEHAVIOR_TREE_LIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -126,7 +170,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;BEHAVIOR_TREE_LIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)external;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
