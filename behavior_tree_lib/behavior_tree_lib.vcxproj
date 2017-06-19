@@ -50,6 +50,7 @@
     <ClInclude Include="src\behavior_tree\task\Composite.h" />
     <ClInclude Include="src\behavior_tree\task\Decorator.h" />
     <ClInclude Include="src\behavior_tree\task\Task.h" />
+    <ClInclude Include="src\utility\UtilityLibrary.h" />
     <ClInclude Include="src\utility\logging\ConsoleLogger.h" />
     <ClInclude Include="src\utility\logging\FileLogger.h" />
     <ClInclude Include="src\utility\logging\Logger.h" />

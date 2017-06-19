@@ -143,6 +143,9 @@
     <ClInclude Include="src\behavior_tree\factory\TaskFactory.h">
       <Filter>src\behavior_tree\factory</Filter>
     </ClInclude>
+    <ClInclude Include="src\utility\UtilityLibrary.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
     <ClInclude Include="src\behavior_tree\factory\TreeFactoryModule.h">
       <Filter>src\behavior_tree\factory</Filter>
     </ClInclude>

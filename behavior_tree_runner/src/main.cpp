@@ -1,5 +1,3 @@
-#include <windows.h>
-
 #include "behavior_tree/data/Blackboard.h"
 #include "behavior_tree/factory/TreeFactory.h"
 #include "behavior_tree/task/Task.h"
@@ -14,33 +12,19 @@ int main()
 
 	LOG_INFO("Starting up application.");
 
-	std::shared_ptr<TreeFactory> treeFactory = std::make_shared<TreeFactory>(TextAccess::createFromString(
-		"<TREES>"
-		"	<ROOT name = \"main\">"
-		"		<SEQUENCE>"
-		"		</SEQUENCE>"
-		"	</ROOT>"
-		"</TREES>"
+	std::shared_ptr<TreeFactory> treeFactory = TreeFactory::create(TextAccess::createFromString(
+		"<BEHAVIOR_SPECIFICATION>"
+		"	<MODULES>"
+		"		<MODULE name=\"core\" />"
+		"	</MODULES>"
+		"	<TREES>"
+		"		<ROOT name=\"main\">"
+		"			<SEQUENCE>"
+		"			</SEQUENCE>"
+		"		</ROOT>"
+		"	</TREES>"
+		"</BEHAVIOR_SPECIFICATION>"
 	));
-
-	{
-		HINSTANCE hGetProcIDDLL = LoadLibrary("behavior_tree_module_core.dll");
-
-		if (!hGetProcIDDLL) {
-			LOG_WARNING("could not load the dynamic library");
-			return EXIT_FAILURE;
-		}
-
-		typedef void(*functionType)(std::shared_ptr<TreeFactory>);
-
-		functionType function = (functionType)GetProcAddress(hGetProcIDDLL, "registerModule");
-		if (!function) {
-			LOG_WARNING("could not locate the function");
-			return EXIT_FAILURE;
-		}
-
-		function(treeFactory);
-	}
 
 	std::shared_ptr<Task> tree = treeFactory->createBehaviorTree("main");
 

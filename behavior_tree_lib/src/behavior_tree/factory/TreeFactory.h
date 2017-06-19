@@ -16,7 +16,7 @@ class TreeFactoryModule;
 class TreeFactory
 {
 public:
-	TreeFactory(std::shared_ptr<TextAccess> specificationAccess);
+	static std::shared_ptr<TreeFactory> create(std::shared_ptr<TextAccess> specificationAccess);
 	~TreeFactory();
 
 	void addModule(std::shared_ptr<TreeFactoryModule> module);
@@ -24,10 +24,15 @@ public:
 	std::shared_ptr<Task> createBehaviorTree(const std::string& rootName) const;
 
 private:
+	static void initializeRootMap(std::shared_ptr<TreeFactory> factory);
+	static void initializeModules(std::shared_ptr<TreeFactory> factory);
+
+	TreeFactory();
+
 	std::shared_ptr<Task> createTreeForElement(TiXmlElement* element) const;
 	std::shared_ptr<Task> createTaskForElement(TiXmlElement* element) const;
 
-	std::shared_ptr<TiXmlDocument> document;
+	std::shared_ptr<TiXmlDocument> m_document;
 	std::map<std::string, TiXmlElement*> m_rootMap;
 	std::map<std::string, std::shared_ptr<TaskFactoryBase>> m_taskFactories;
 };
