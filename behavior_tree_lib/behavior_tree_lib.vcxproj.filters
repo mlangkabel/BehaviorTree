@@ -87,6 +87,9 @@
     <ClCompile Include="src\behavior_tree\factory\TreeFactoryModule.cpp">
       <Filter>src\behavior_tree\factory</Filter>
     </ClCompile>
+    <ClCompile Include="src\utility\Singleton.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utility\logging\FileLogger.h">
@@ -148,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="src\behavior_tree\factory\TreeFactoryModule.h">
       <Filter>src\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\Singleton.h">
+      <Filter>src\utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

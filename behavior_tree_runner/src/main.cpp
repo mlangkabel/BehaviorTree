@@ -32,7 +32,7 @@ int main()
 
 	std::shared_ptr<Blackboard> blackboard = std::make_shared<Blackboard>();
 
-	bool success = tree->evaluate(blackboard);
+	bool success = (tree->evaluate(blackboard) == Task::STATUS_SUCCESS);
 
 	LOG_INFO(std::string("Behavior tree evaluation has been ") + (success ? "" : "un") + "successful.");
 

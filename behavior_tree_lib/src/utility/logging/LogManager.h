@@ -6,14 +6,17 @@
 
 #include "utility/logging/Logger.h"
 #include "utility/logging/LogManagerImplementation.h"
+#include "utility/Singleton.h"
 
-class LogManager
+class LogManager: public Singleton
 {
 public:
 	static std::shared_ptr<LogManager> getInstance();
 	static void destroyInstance();
 
-	~LogManager();
+	virtual ~LogManager();
+
+	virtual std::string getSingletonName();
 
 	void addLogger(std::shared_ptr<Logger> logger);
 	void removeLogger(std::shared_ptr<Logger> logger);
@@ -40,8 +43,7 @@ public:
 	);
 
 private:
-	static std::shared_ptr<LogManager> s_instance;
-	static std::mutex s_instanceMutex;
+	static std::string getSingletonNameStatic();
 
 	LogManager();
 	LogManager(const LogManager&);

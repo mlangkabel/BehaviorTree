@@ -3,25 +3,31 @@
 #include <algorithm>
 
 #include "utility/logging/LogMessage.h"
+#include "utility/SingletonManager.h"
 
 std::shared_ptr<LogManager> LogManager::getInstance()
 {
-	std::lock_guard<std::mutex> lockGuard(s_instanceMutex);
-	if (s_instance.use_count() == 0)
+	std::shared_ptr<LogManager> instance = std::dynamic_pointer_cast<LogManager>(SingletonManager::getInstance()->getSingleton(getSingletonNameStatic()));
+	if (!instance)
 	{
-		s_instance = std::shared_ptr<LogManager>(new LogManager());
+		instance = std::shared_ptr<LogManager>(new LogManager());
+		SingletonManager::getInstance()->addSingleton(instance);
 	}
-	return s_instance;
+	return instance;
 }
 
 void LogManager::destroyInstance()
 {
-	std::lock_guard<std::mutex> lockGuard(s_instanceMutex);
-	s_instance.reset();
+	SingletonManager::getInstance()->removeSingleton(getSingletonNameStatic());
 }
 
 LogManager::~LogManager()
 {
+}
+
+std::string LogManager::getSingletonName()
+{
+	return getSingletonNameStatic();
 }
 
 void LogManager::addLogger(std::shared_ptr<Logger> logger)
@@ -74,8 +80,10 @@ void LogManager::logError(
 	m_logManagerImplementation.logError(message, file, function, line);
 }
 
-std::shared_ptr<LogManager> LogManager::s_instance;
-std::mutex LogManager::s_instanceMutex;
+std::string LogManager::getSingletonNameStatic()
+{
+	return "LogManager";
+}
 
 LogManager::LogManager()
 {

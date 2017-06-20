@@ -13,7 +13,7 @@ namespace Utility
 	{
 		HINSTANCE handle = LoadLibrary(libraryFilePath.c_str());
 
-		if (!handle) 
+		if (!handle)
 		{
 			LOG_ERROR("Could not load the dynamic library from \"" + libraryFilePath + "\".");
 			return nullptr;
@@ -22,7 +22,7 @@ namespace Utility
 		typedef R(*functionTypes)(P0);
 
 		std::function<R(P0)> function = (functionTypes)GetProcAddress(handle, functionName.c_str());
-		if (!function) 
+		if (!function)
 		{
 			LOG_ERROR("Could not locate the function \"" + functionName + "\" in dynamic library \"" + libraryFilePath + "\".");
 			return nullptr;
