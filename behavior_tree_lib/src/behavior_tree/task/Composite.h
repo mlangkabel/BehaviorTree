@@ -9,7 +9,6 @@
 class Composite: public Task
 {
 public:
-	Composite();
 	virtual ~Composite();
 
 	void addChild(std::shared_ptr<Task> child);

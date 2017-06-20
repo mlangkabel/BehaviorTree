@@ -6,7 +6,6 @@
 class Action: public Task
 {
 public:
-	Action();
 	virtual ~Action();
 };
 
