@@ -1,8 +1,8 @@
 #ifndef TASK_ROOT_H
 #define TASK_ROOT_H
 
-#include "behavior_tree/task/Decorator.h"
 #include "behavior_tree/factory/TaskFactory.h"
+#include "behavior_tree/task/Decorator.h"
 
 class TaskRoot;
 

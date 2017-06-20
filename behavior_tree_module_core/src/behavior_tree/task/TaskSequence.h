@@ -4,8 +4,8 @@
 #include <memory>
 #include <vector>
 
-#include "behavior_tree/task/Composite.h"
 #include "behavior_tree/factory/TaskFactory.h"
+#include "behavior_tree/task/Composite.h"
 
 class TaskSequence;
 

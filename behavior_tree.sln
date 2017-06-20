@@ -7,11 +7,17 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_tree_runner", "beh
 	ProjectSection(ProjectDependencies) = postProject
 		{E57FAD6B-8D19-4651-9388-0A96639CDF58} = {E57FAD6B-8D19-4651-9388-0A96639CDF58}
 		{EDDEED74-75E4-4176-AC68-9535FB3419A9} = {EDDEED74-75E4-4176-AC68-9535FB3419A9}
+		{5679D7E3-5280-4217-A298-F593D358CDDA} = {5679D7E3-5280-4217-A298-F593D358CDDA}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_tree_lib", "behavior_tree_lib\behavior_tree_lib.vcxproj", "{E57FAD6B-8D19-4651-9388-0A96639CDF58}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_tree_module_core", "behavior_tree_module_core\behavior_tree_module_core.vcxproj", "{EDDEED74-75E4-4176-AC68-9535FB3419A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E57FAD6B-8D19-4651-9388-0A96639CDF58} = {E57FAD6B-8D19-4651-9388-0A96639CDF58}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_tree_module_logging", "behavior_tree_module_logging\behavior_tree_module_logging.vcxproj", "{5679D7E3-5280-4217-A298-F593D358CDDA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E57FAD6B-8D19-4651-9388-0A96639CDF58} = {E57FAD6B-8D19-4651-9388-0A96639CDF58}
 	EndProjectSection
@@ -48,6 +54,14 @@ Global
 		{EDDEED74-75E4-4176-AC68-9535FB3419A9}.Release|x64.Build.0 = Release|x64
 		{EDDEED74-75E4-4176-AC68-9535FB3419A9}.Release|x86.ActiveCfg = Release|Win32
 		{EDDEED74-75E4-4176-AC68-9535FB3419A9}.Release|x86.Build.0 = Release|Win32
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Debug|x64.ActiveCfg = Debug|x64
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Debug|x64.Build.0 = Debug|x64
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Debug|x86.ActiveCfg = Debug|Win32
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Debug|x86.Build.0 = Debug|Win32
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Release|x64.ActiveCfg = Release|x64
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Release|x64.Build.0 = Release|x64
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Release|x86.ActiveCfg = Release|Win32
+		{5679D7E3-5280-4217-A298-F593D358CDDA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
