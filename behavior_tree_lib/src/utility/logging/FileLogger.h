@@ -6,7 +6,7 @@
 #include "utility/logging/Logger.h"
 #include "utility/logging/LogMessage.h"
 
-class FileLogger: public Logger
+class FileLogger : public Logger
 {
 public:
 	FileLogger();

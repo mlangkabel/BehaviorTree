@@ -9,7 +9,7 @@
 
 class CompositeSelector;
 
-class CompositeFactorySelector: public TaskFactory<CompositeSelector>
+class CompositeFactorySelector : public TaskFactory<CompositeSelector>
 {
 public:
 	CompositeFactorySelector()

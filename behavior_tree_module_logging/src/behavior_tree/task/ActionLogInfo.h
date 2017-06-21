@@ -6,7 +6,7 @@
 
 class ActionLogInfo;
 
-class ActionFactoryLogInfo: public TaskFactory<ActionLogInfo, std::string>
+class ActionFactoryLogInfo : public TaskFactory<ActionLogInfo, std::string>
 {
 public:
 	ActionFactoryLogInfo()
@@ -14,7 +14,7 @@ public:
 	{}
 };
 
-class ActionLogInfo: public Action
+class ActionLogInfo : public Action
 {
 public:
 	ActionLogInfo(const std::string &message);

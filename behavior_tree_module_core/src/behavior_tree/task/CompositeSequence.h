@@ -9,14 +9,14 @@
 
 class CompositeSequence;
 
-class CompositeFactorySequence: public TaskFactory<CompositeSequence>
+class CompositeFactorySequence : public TaskFactory<CompositeSequence>
 {
 public:
 	CompositeFactorySequence()
 		: TaskFactory<CompositeSequence>("SEQUENCE")
 	{}
 };
-	
+
 class CompositeSequence : public Composite
 {
 public:

@@ -30,7 +30,7 @@ private:
 
 
 template <typename TaskType, typename T1 = void, typename T2 = void, typename T3 = void, typename T4 = void, typename T5 = void, typename T6 = void>
-class TaskFactory: public TaskFactoryBase
+class TaskFactory : public TaskFactoryBase
 {
 public:
 	TaskFactory(
@@ -62,7 +62,7 @@ public:
 };
 
 template <typename TaskType, typename T1, typename T2, typename T3, typename T4, typename T5>
-class TaskFactory<TaskType, T1, T2, T3, T4, T5, void>: public TaskFactoryBase
+class TaskFactory<TaskType, T1, T2, T3, T4, T5, void> : public TaskFactoryBase
 {
 public:
 	TaskFactory(
@@ -92,7 +92,7 @@ public:
 };
 
 template <typename TaskType, typename T1, typename T2, typename T3, typename T4>
-class TaskFactory<TaskType, T1, T2, T3, T4, void, void>: public TaskFactoryBase
+class TaskFactory<TaskType, T1, T2, T3, T4, void, void> : public TaskFactoryBase
 {
 public:
 	TaskFactory(
@@ -120,7 +120,7 @@ public:
 };
 
 template <typename TaskType, typename T1, typename T2, typename T3>
-class TaskFactory<TaskType, T1, T2, T3, void, void, void>: public TaskFactoryBase
+class TaskFactory<TaskType, T1, T2, T3, void, void, void> : public TaskFactoryBase
 {
 public:
 	TaskFactory(
@@ -145,7 +145,7 @@ public:
 };
 
 template <typename TaskType, typename T1, typename T2>
-class TaskFactory<TaskType, T1, T2, void, void, void, void>: public TaskFactoryBase
+class TaskFactory<TaskType, T1, T2, void, void, void, void> : public TaskFactoryBase
 {
 public:
 	TaskFactory(
@@ -168,7 +168,7 @@ public:
 };
 
 template <typename TaskType, typename T1>
-class TaskFactory<TaskType, T1, void, void, void, void, void>: public TaskFactoryBase
+class TaskFactory<TaskType, T1, void, void, void, void, void> : public TaskFactoryBase
 {
 public:
 	TaskFactory(const std::string &taskName, const std::string &parameterName1)
@@ -184,7 +184,7 @@ public:
 };
 
 template <typename TaskType>
-class TaskFactory<TaskType, void, void, void, void, void, void>: public TaskFactoryBase
+class TaskFactory<TaskType, void, void, void, void, void, void> : public TaskFactoryBase
 {
 public:
 	TaskFactory(const std::string &taskName)

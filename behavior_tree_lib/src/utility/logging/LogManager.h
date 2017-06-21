@@ -8,7 +8,7 @@
 #include "utility/logging/LogManagerImplementation.h"
 #include "utility/Singleton.h"
 
-class LogManager: public Singleton
+class LogManager : public Singleton
 {
 public:
 	static std::shared_ptr<LogManager> getInstance();

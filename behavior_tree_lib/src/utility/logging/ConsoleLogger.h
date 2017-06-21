@@ -4,7 +4,7 @@
 #include "utility/logging/Logger.h"
 #include "utility/logging/LogMessage.h"
 
-class ConsoleLogger: public Logger
+class ConsoleLogger : public Logger
 {
 public:
 	ConsoleLogger();

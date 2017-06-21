@@ -86,7 +86,7 @@ std::shared_ptr<Task> TreeFactory::createBehaviorTree(const std::string& rootNam
 std::shared_ptr<Task> TreeFactory::createTreeForElement(TiXmlElement* element) const
 {
 	std::shared_ptr<Task> task = createTaskForElement(element);
-	
+
 	if (!task)
 	{
 		throw std::exception(("Creating behavior tree at line " + std::to_string(element->Row()) + "failed.").c_str());

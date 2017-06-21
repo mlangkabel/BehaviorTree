@@ -7,7 +7,7 @@
 namespace Utility
 {
 	template <typename T>
-	inline std::string toString (const T& t) {
+	inline std::string toString(const T& t) {
 		std::stringstream ss;
 		ss << t;
 		return ss.str();
@@ -21,7 +21,7 @@ namespace Utility
 		buffer >> value;
 		return value;
 	}
-	
+
 	template <>
 	std::string stringTo<std::string>(std::string s);
 

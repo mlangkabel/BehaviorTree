@@ -5,13 +5,13 @@
 
 #include "behavior_tree/task/Task.h"
 
-class Decorator: public Task
+class Decorator : public Task
 {
 public:
 	virtual ~Decorator();
 
 	void setChild(std::shared_ptr<Task> child);
-	
+
 protected:
 	std::shared_ptr<Task> m_child;
 };

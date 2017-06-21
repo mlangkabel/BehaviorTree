@@ -7,7 +7,7 @@ CompositeSelector::CompositeSelector()
 CompositeSelector::~CompositeSelector()
 {
 }
-		
+
 Task::StatusType CompositeSelector::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	StatusType status = STATUS_FAILURE;

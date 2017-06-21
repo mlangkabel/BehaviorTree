@@ -6,7 +6,7 @@
 
 class DecoratorRoot;
 
-class DecoratorFactoryRoot: public TaskFactory<DecoratorRoot, std::string>
+class DecoratorFactoryRoot : public TaskFactory<DecoratorRoot, std::string>
 {
 public:
 	DecoratorFactoryRoot()

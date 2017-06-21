@@ -3,7 +3,7 @@
 
 #include "behavior_tree/task/Task.h"
 
-class Action: public Task
+class Action : public Task
 {
 public:
 	virtual ~Action();

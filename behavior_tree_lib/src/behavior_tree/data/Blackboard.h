@@ -10,7 +10,7 @@
 
 class Blackboard
 {
-public: 
+public:
 	Blackboard();
 	Blackboard(std::shared_ptr<Blackboard> parent);
 	~Blackboard();
