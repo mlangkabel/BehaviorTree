@@ -1,14 +1,14 @@
-#include "behavior_tree/task/TaskSelector.h"
+#include "behavior_tree/task/CompositeSelector.h"
 
-TaskSelector::TaskSelector()
+CompositeSelector::CompositeSelector()
 {
 }
 
-TaskSelector::~TaskSelector()
+CompositeSelector::~CompositeSelector()
 {
 }
 		
-Task::StatusType TaskSelector::evaluate(std::shared_ptr<Blackboard> blackboard)
+Task::StatusType CompositeSelector::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	StatusType status = STATUS_FAILURE;
 	for (size_t i = 0; i < m_children.size(); i++)

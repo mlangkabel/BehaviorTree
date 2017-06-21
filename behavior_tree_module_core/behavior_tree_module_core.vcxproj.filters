@@ -18,13 +18,13 @@
     <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleCore.cpp">
       <Filter>src\behavior_tree\factory</Filter>
     </ClCompile>
-    <ClCompile Include="src\behavior_tree\task\TaskRoot.cpp">
+    <ClCompile Include="src\behavior_tree\task\DecoratorRoot.cpp">
       <Filter>src\behavior_tree\task</Filter>
     </ClCompile>
-    <ClCompile Include="src\behavior_tree\task\TaskSelector.cpp">
+    <ClCompile Include="src\behavior_tree\task\CompositeSelector.cpp">
       <Filter>src\behavior_tree\task</Filter>
     </ClCompile>
-    <ClCompile Include="src\behavior_tree\task\TaskSequence.cpp">
+    <ClCompile Include="src\behavior_tree\task\CompositeSequence.cpp">
       <Filter>src\behavior_tree\task</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +32,13 @@
     <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleCore.h">
       <Filter>src\behavior_tree\factory</Filter>
     </ClInclude>
-    <ClInclude Include="src\behavior_tree\task\TaskRoot.h">
+    <ClInclude Include="src\behavior_tree\task\DecoratorRoot.h">
       <Filter>src\behavior_tree\task</Filter>
     </ClInclude>
-    <ClInclude Include="src\behavior_tree\task\TaskSelector.h">
+    <ClInclude Include="src\behavior_tree\task\CompositeSelector.h">
       <Filter>src\behavior_tree\task</Filter>
     </ClInclude>
-    <ClInclude Include="src\behavior_tree\task\TaskSequence.h">
+    <ClInclude Include="src\behavior_tree\task\CompositeSequence.h">
       <Filter>src\behavior_tree\task</Filter>
     </ClInclude>
   </ItemGroup>

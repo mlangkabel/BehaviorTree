@@ -1,9 +1,9 @@
 #include "behavior_tree/factory/TreeFactoryModuleCore.h"
 
 #include "behavior_tree/factory/TreeFactory.h"
-#include "behavior_tree/task/TaskRoot.h"
-#include "behavior_tree/task/TaskSelector.h"
-#include "behavior_tree/task/TaskSequence.h"
+#include "behavior_tree/task/DecoratorRoot.h"
+#include "behavior_tree/task/CompositeSelector.h"
+#include "behavior_tree/task/CompositeSequence.h"
 
 extern "C" void registerModule(std::shared_ptr<TreeFactory> factory)
 {
@@ -12,9 +12,9 @@ extern "C" void registerModule(std::shared_ptr<TreeFactory> factory)
 
 TreeFactoryModuleCore::TreeFactoryModuleCore()
 {
-	addFactory(std::make_shared<TaskFactoryRoot>());
-	addFactory(std::make_shared<TaskFactorySelector>());
-	addFactory(std::make_shared<TaskFactorySequence>());
+	addFactory(std::make_shared<DecoratorFactoryRoot>());
+	addFactory(std::make_shared<CompositeFactorySelector>());
+	addFactory(std::make_shared<CompositeFactorySequence>());
 }
 
 TreeFactoryModuleCore::~TreeFactoryModuleCore()

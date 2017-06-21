@@ -1,14 +1,14 @@
-#include "behavior_tree/task/TaskSequence.h"
+#include "behavior_tree/task/CompositeSequence.h"
 
-TaskSequence::TaskSequence()
+CompositeSequence::CompositeSequence()
 {
 }
 
-TaskSequence::~TaskSequence()
+CompositeSequence::~CompositeSequence()
 {
 }
 		
-Task::StatusType TaskSequence::evaluate(std::shared_ptr<Blackboard> blackboard)
+Task::StatusType CompositeSequence::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	StatusType status = STATUS_SUCCESS;
 	for (size_t i = 0; i < m_children.size(); i++)

@@ -6,10 +6,10 @@
 
 class ActionLogInfo;
 
-class TaskFactoryLogInfo: public TaskFactory<ActionLogInfo, std::string>
+class ActionFactoryLogInfo: public TaskFactory<ActionLogInfo, std::string>
 {
 public:
-	TaskFactoryLogInfo()
+	ActionFactoryLogInfo()
 		: TaskFactory<ActionLogInfo, std::string>("LOG_INFO", "message")
 	{}
 };
