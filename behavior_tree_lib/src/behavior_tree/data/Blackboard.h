@@ -46,7 +46,7 @@ private:
 
 		virtual std::string getAsString()
 		{
-			return Utility::toString(value);
+			return utility::toString(value);
 		}
 
 		T value;

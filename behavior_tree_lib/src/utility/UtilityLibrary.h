@@ -6,7 +6,7 @@
 
 #include "utility/logging/logging.h"
 
-namespace Utility
+namespace utility
 {
 	template <typename R, typename P0>
 	std::function<R(P0)> loadFunctionFromDynamicLibrary(const std::string& libraryFilePath, const std::string& functionName)

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{5ad2a198-0729-4515-b9ef-230aaee75223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree">
+      <UniqueIdentifier>{a8126a76-5854-4dc6-b7e4-361f8039617e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\task">
+      <UniqueIdentifier>{d72f290d-3627-4017-94fe-646f23179388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\factory">
+      <UniqueIdentifier>{fac74b6a-9f1f-477a-b945-78567c4d47e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility">
+      <UniqueIdentifier>{be2ac523-3a88-4d76-a979-077de1a2f648}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleKeyboard.cpp">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionSimulateKeyDown.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\UtilityKeyboard.cpp">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionSimulateKeyUp.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleKeyboard.h">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionSimulateKeyDown.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\UtilityKeyboard.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionSimulateKeyUp.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

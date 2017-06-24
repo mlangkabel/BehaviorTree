@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{3f525616-7ddc-4149-9e82-d120af77a145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree">
+      <UniqueIdentifier>{f5d91610-9ffe-4e67-8a04-13037edc57a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\factory">
+      <UniqueIdentifier>{6e28b2f4-39d1-4574-a3de-a09f2c40b021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\task">
+      <UniqueIdentifier>{ece901af-9a34-42e0-9305-857bf20abf45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\behavior_tree\task\ActionSetMouseCursorPosition.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleMouse.cpp">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionSimulateMouseButtonDown.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionSimulateMouseButtonUp.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\behavior_tree\task\ActionSetMouseCursorPosition.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleMouse.h">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionSimulateMouseButtonDown.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionSimulateMouseButtonUp.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

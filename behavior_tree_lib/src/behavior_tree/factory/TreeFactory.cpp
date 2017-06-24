@@ -170,7 +170,7 @@ void TreeFactory::initializeModules(std::shared_ptr<TreeFactory> factory)
 			const std::string moduleName = getAttributeValue(element, "name");
 			const std::string libraryFilePath = "behavior_tree_module_" + moduleName + ".dll";
 
-			std::function<void(std::shared_ptr<TreeFactory>)> registerModule = Utility::loadFunctionFromDynamicLibrary<void, std::shared_ptr<TreeFactory>>(
+			std::function<void(std::shared_ptr<TreeFactory>)> registerModule = utility::loadFunctionFromDynamicLibrary<void, std::shared_ptr<TreeFactory>>(
 				libraryFilePath,
 				"registerModule"
 				);

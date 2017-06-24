@@ -1,6 +1,6 @@
 #include "utility/UtilityString.h"
 
-namespace Utility
+namespace utility
 {
 	template <>
 	std::string stringTo<std::string>(std::string s)

@@ -4,7 +4,7 @@
 #include <string>
 #include <sstream>
 
-namespace Utility
+namespace utility
 {
 	template <typename T>
 	inline std::string toString(const T& t) {

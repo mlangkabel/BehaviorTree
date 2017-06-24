@@ -51,12 +51,12 @@ public:
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters)
 	{
 		return std::shared_ptr<TaskType>(new TaskType(
-			Utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
-			Utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
-			Utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second),
-			Utility::stringTo<T4>(parameters.find(getParameterNames()[3])->second),
-			Utility::stringTo<T5>(parameters.find(getParameterNames()[4])->second),
-			Utility::stringTo<T6>(parameters.find(getParameterNames()[5])->second)
+			Ututilityility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
+			utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
+			utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second),
+			utility::stringTo<T4>(parameters.find(getParameterNames()[3])->second),
+			utility::stringTo<T5>(parameters.find(getParameterNames()[4])->second),
+			utility::stringTo<T6>(parameters.find(getParameterNames()[5])->second)
 		));
 	}
 };
@@ -82,11 +82,11 @@ public:
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters)
 	{
 		return std::shared_ptr<TaskType>(new TaskType(
-			Utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
-			Utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
-			Utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second),
-			Utility::stringTo<T4>(parameters.find(getParameterNames()[3])->second),
-			Utility::stringTo<T5>(parameters.find(getParameterNames()[4])->second)
+			utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
+			utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
+			utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second),
+			utility::stringTo<T4>(parameters.find(getParameterNames()[3])->second),
+			utility::stringTo<T5>(parameters.find(getParameterNames()[4])->second)
 		));
 	}
 };
@@ -111,10 +111,10 @@ public:
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters)
 	{
 		return std::shared_ptr<TaskType>(new TaskType(
-			Utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
-			Utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
-			Utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second),
-			Utility::stringTo<T4>(parameters.find(getParameterNames()[3])->second)
+			utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
+			utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
+			utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second),
+			utility::stringTo<T4>(parameters.find(getParameterNames()[3])->second)
 		));
 	}
 };
@@ -137,9 +137,9 @@ public:
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters)
 	{
 		return std::shared_ptr<TaskType>(new TaskType(
-			Utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
-			Utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
-			Utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second)
+			utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
+			utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
+			utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second)
 		));
 	}
 };
@@ -161,8 +161,8 @@ public:
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters)
 	{
 		return std::shared_ptr<TaskType>(new TaskType(
-			Utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
-			Utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second)
+			utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
+			utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second)
 		));
 	}
 };
@@ -179,7 +179,7 @@ public:
 
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters)
 	{
-		return std::make_shared<TaskType>(Utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second));
+		return std::make_shared<TaskType>(utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second));
 	}
 };
 
