@@ -83,12 +83,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>bin\$(Configuration)\</OutDir>
     <IntDir>build\$(Configuration)\</IntDir>
-    <ExtensionsToDeleteOnClean>$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+    <ExtensionsToDeleteOnClean>$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt);$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>bin\$(Configuration)\</OutDir>
     <IntDir>build\$(Configuration)\</IntDir>
-    <ExtensionsToDeleteOnClean>$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
+    <ExtensionsToDeleteOnClean>$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt);$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -103,7 +103,10 @@
     </Link>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)"
-copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt)"</Command>
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt)"
+
+if not exist "$(SolutionDir)behavior_tree_test\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_test\bin\$(Configuration)"
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -130,7 +133,10 @@ copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_runner\bi
     </Link>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)"
-copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt)"</Command>
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt)"
+
+if not exist "$(SolutionDir)behavior_tree_test\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_test\bin\$(Configuration)"
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
