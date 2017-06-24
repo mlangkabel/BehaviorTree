@@ -19,25 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ActionCheckVariableEqualsTests.cpp" />
-    <ClCompile Include="src\ActionCheckVariableExistsTests.cpp" />
-    <ClCompile Include="src\ActionDecrementIntegerVariableTests.cpp" />
-    <ClCompile Include="src\ActionIncrementIntegerVariableTests.cpp" />
-    <ClCompile Include="src\ActionLogErrorTests.cpp" />
-    <ClCompile Include="src\ActionLogInfoTests.cpp" />
-    <ClCompile Include="src\ActionLogWarningTests.cpp" />
-    <ClCompile Include="src\ActionSetIntegerVariableTests.cpp" />
-    <ClCompile Include="src\ActionSetStringVariableTests.cpp" />
-    <ClCompile Include="src\CompositeSelectorTests.cpp" />
-    <ClCompile Include="src\CompositeSequenceTests.cpp" />
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleBlackboard.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionCheckVariableExists.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionCheckVariableEquals.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionDecrementIntegerVariable.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionIncrementIntegerVariable.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionSetIntegerVariable.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionSetStringVariable.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\UtilityTest.h" />
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleBlackboard.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionCheckVariableExists.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionCheckVariableEquals.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionDecrementIntegerVariable.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionIncrementIntegerVariable.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionSetIntegerVariable.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionSetStringVariable.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4DE1AA3C-7A7D-4F68-9ACC-C0FC167291B0}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <RootNamespace>behavior_tree_test</RootNamespace>
+    <ProjectGuid>{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}</ProjectGuid>
+    <RootNamespace>behavior_tree_module_core</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -45,31 +46,27 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -90,87 +87,75 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
     <OutDir>bin\$(Configuration)\</OutDir>
     <IntDir>build\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <ExtensionsToDeleteOnClean>$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt);$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>true</LinkIncremental>
     <OutDir>bin\$(Configuration)\</OutDir>
     <IntDir>build\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <ExtensionsToDeleteOnClean>$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt);$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt);$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;$(VCInstallDir)UnitTest\include;$(SolutionDir)behavior_tree_module_logging\src;$(SolutionDir)behavior_tree_lib\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <UseFullPaths>true</UseFullPaths>
-      <PrecompiledHeaderFile />
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(SolutionDir)behavior_tree_lib\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;$(SolutionDir)behavior_tree_lib\bin\$(Configuration)\;$(SolutionDir)behavior_tree_singleton_manager\bin\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)behavior_tree_lib\bin\$(Configuration)\;$(SolutionDir)behavior_tree_singleton_manager\bin\$(Configuration)\</AdditionalLibraryDirectories>
       <AdditionalDependencies>behavior_tree_lib.lib;behavior_tree_singleton_manager.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)"
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt)"
+
+if not exist "$(SolutionDir)behavior_tree_test\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_test\bin\$(Configuration)"
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <UseFullPaths>true</UseFullPaths>
+      <SDLCheck>true</SDLCheck>
     </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;$(VCInstallDir)UnitTest\include;$(SolutionDir)behavior_tree_module_logging\src;$(SolutionDir)behavior_tree_lib\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <UseFullPaths>true</UseFullPaths>
-      <PrecompiledHeaderFile />
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(SolutionDir)behavior_tree_lib\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;$(SolutionDir)behavior_tree_lib\bin\$(Configuration)\;$(SolutionDir)behavior_tree_singleton_manager\bin\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)behavior_tree_lib\bin\$(Configuration)\;$(SolutionDir)behavior_tree_singleton_manager\bin\$(Configuration)\</AdditionalLibraryDirectories>
       <AdditionalDependencies>behavior_tree_lib.lib;behavior_tree_singleton_manager.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)"
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_runner\bin\$(Configuration)\$(TargetName)$(TargetExt)"
+
+if not exist "$(SolutionDir)behavior_tree_test\bin\$(Configuration)" mkdir "$(SolutionDir)behavior_tree_test\bin\$(Configuration)"
+copy "$(OutDir)$(TargetName)$(TargetExt)" "$(SolutionDir)behavior_tree_test\bin\$(Configuration)\$(TargetName)$(TargetExt)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <UseFullPaths>true</UseFullPaths>
+      <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

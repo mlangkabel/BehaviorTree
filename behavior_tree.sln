@@ -46,6 +46,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_tree_module_keyboa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_tree_module_mouse", "behavior_tree_module_mouse\behavior_tree_module_mouse.vcxproj", "{EEFE75B2-125E-47D9-B349-659F3021033A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "behavior_tree_module_blackboard", "behavior_tree_module_blackboard\behavior_tree_module_blackboard.vcxproj", "{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -118,6 +120,14 @@ Global
 		{EEFE75B2-125E-47D9-B349-659F3021033A}.Release|x64.Build.0 = Release|x64
 		{EEFE75B2-125E-47D9-B349-659F3021033A}.Release|x86.ActiveCfg = Release|Win32
 		{EEFE75B2-125E-47D9-B349-659F3021033A}.Release|x86.Build.0 = Release|Win32
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Debug|x64.ActiveCfg = Debug|x64
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Debug|x64.Build.0 = Debug|x64
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Debug|x86.ActiveCfg = Debug|Win32
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Debug|x86.Build.0 = Debug|Win32
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Release|x64.ActiveCfg = Release|x64
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Release|x64.Build.0 = Release|x64
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Release|x86.ActiveCfg = Release|Win32
+		{DAAB28E1-5B13-4284-82D3-ED75EFF34BD7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

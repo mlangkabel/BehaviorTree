@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{af3f17f0-9f69-4287-a902-d58f04201bd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree">
+      <UniqueIdentifier>{42f19a96-8ce9-42fa-9e0f-58455796efc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\task">
+      <UniqueIdentifier>{259e8e87-f9c0-4e5d-a3d9-06e6af5c4dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\factory">
+      <UniqueIdentifier>{2f3cfc12-c304-44ba-9867-f9dd90703e32}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleBlackboard.cpp">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionSetIntegerVariable.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionSetStringVariable.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionCheckVariableExists.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionCheckVariableEquals.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionIncrementIntegerVariable.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionDecrementIntegerVariable.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleBlackboard.h">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionSetIntegerVariable.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionSetStringVariable.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionCheckVariableExists.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionCheckVariableEquals.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionIncrementIntegerVariable.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionDecrementIntegerVariable.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
