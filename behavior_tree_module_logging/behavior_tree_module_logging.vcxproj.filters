@@ -21,12 +21,24 @@
     <ClCompile Include="src\behavior_tree\task\ActionLogInfo.cpp">
       <Filter>src\behavior_tree\task</Filter>
     </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionLogError.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionLogWarning.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleLogging.h">
       <Filter>src\behavior_tree\factory</Filter>
     </ClInclude>
     <ClInclude Include="src\behavior_tree\task\ActionLogInfo.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionLogError.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionLogWarning.h">
       <Filter>src\behavior_tree\task</Filter>
     </ClInclude>
   </ItemGroup>

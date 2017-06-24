@@ -20,11 +20,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleLogging.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionLogError.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionLogInfo.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionLogWarning.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleLogging.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionLogError.h" />
     <ClInclude Include="src\behavior_tree\task\ActionLogInfo.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionLogWarning.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5679D7E3-5280-4217-A298-F593D358CDDA}</ProjectGuid>
