@@ -93,6 +93,9 @@
     <ClCompile Include="src\behavior_tree\task\ActionEvaluateTree.cpp">
       <Filter>src\behavior_tree\task</Filter>
     </ClCompile>
+    <ClCompile Include="src\utility\logging\StringLogger.cpp">
+      <Filter>src\utility\logging</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utility\logging\FileLogger.h">
@@ -160,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="src\behavior_tree\task\ActionEvaluateTree.h">
       <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\logging\StringLogger.h">
+      <Filter>src\utility\logging</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

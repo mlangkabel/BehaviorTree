@@ -37,6 +37,7 @@
     <ClCompile Include="src\utility\logging\Logger.cpp" />
     <ClCompile Include="src\utility\logging\LogManager.cpp" />
     <ClCompile Include="src\utility\logging\LogManagerImplementation.cpp" />
+    <ClCompile Include="src\utility\logging\StringLogger.cpp" />
     <ClCompile Include="src\utility\Singleton.cpp" />
     <ClCompile Include="src\utility\TextAccess.cpp" />
     <ClCompile Include="src\utility\UtilityString.cpp" />
@@ -53,6 +54,7 @@
     <ClInclude Include="src\behavior_tree\task\Decorator.h" />
     <ClInclude Include="src\behavior_tree\task\Task.h" />
     <ClInclude Include="src\behavior_tree\task\ActionEvaluateTree.h" />
+    <ClInclude Include="src\utility\logging\StringLogger.h" />
     <ClInclude Include="src\utility\Singleton.h" />
     <ClInclude Include="src\utility\UtilityLibrary.h" />
     <ClInclude Include="src\utility\logging\ConsoleLogger.h" />

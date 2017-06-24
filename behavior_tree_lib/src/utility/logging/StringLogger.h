@@ -1,14 +1,17 @@
-#ifndef CONSOLE_LOGGER_H
-#define CONSOLE_LOGGER_H
+#ifndef STRING_LOGGER_H
+#define STRING_LOGGER_H
 
 #include "utility/logging/Logger.h"
 #include "utility/logging/LogMessage.h"
 
-class ConsoleLogger : public Logger
+class StringLogger : public Logger
 {
 public:
-	ConsoleLogger();
-	virtual ~ConsoleLogger();
+	StringLogger();
+	virtual ~StringLogger();
+
+	void clearLogString();
+	std::string getLogString() const;
 
 	virtual void logInfo(const LogMessage& message);
 	virtual void logWarning(const LogMessage& message);
@@ -16,6 +19,8 @@ public:
 
 private:
 	void logMessage(const std::string& type, const LogMessage& message);
+
+	std::string m_logString;
 };
 
-#endif // CONSOLE_LOGGER_H
+#endif // STRING_LOGGER_H
