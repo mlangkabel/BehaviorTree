@@ -22,6 +22,11 @@
     <ClCompile Include="src\ActionLogErrorTests.cpp" />
     <ClCompile Include="src\ActionLogInfoTests.cpp" />
     <ClCompile Include="src\ActionLogWarningTests.cpp" />
+    <ClCompile Include="src\CompositeSelectorTests.cpp" />
+    <ClCompile Include="src\CompositeSequenceTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\UtilityTest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4DE1AA3C-7A7D-4F68-9ACC-C0FC167291B0}</ProjectGuid>

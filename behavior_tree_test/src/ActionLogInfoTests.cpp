@@ -36,7 +36,7 @@ namespace behavior_tree_test
 
 			LogManager::destroyInstance();
 
-			Assert::AreEqual("INFO: test info\n", stringLogger->getLogString().c_str(), false, L"cool", LINE_INFO());
+			Assert::AreEqual("INFO: test info\n", stringLogger->getLogString().c_str(), false);
 		}
 	};
 }

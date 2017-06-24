@@ -15,5 +15,16 @@
     <ClCompile Include="src\ActionLogWarningTests.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\CompositeSelectorTests.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CompositeSequenceTests.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\UtilityTest.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
