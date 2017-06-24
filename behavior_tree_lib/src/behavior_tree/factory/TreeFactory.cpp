@@ -6,9 +6,10 @@
 
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/factory/TreeFactoryModule.h"
-#include "behavior_tree/task/Task.h"
+#include "behavior_tree/task/ActionEvaluateTree.h"
 #include "behavior_tree/task/Composite.h"
 #include "behavior_tree/task/Decorator.h"
+#include "behavior_tree/task/Task.h"
 #include "utility/logging/logging.h"
 #include "utility/TextAccess.h"
 #include "utility/UtilityLibrary.h"
@@ -23,7 +24,7 @@ namespace
 			const std::string taskType = element->Value();
 			throw std::exception((
 				"Node \"" + taskType + "\" is missing the \"" + attributeName + "\" attribute. Line " + std::to_string(element->Row()
-			)).c_str());
+				)).c_str());
 		}
 		return attributeValue;
 	}
@@ -31,20 +32,25 @@ namespace
 
 std::shared_ptr<TreeFactory> TreeFactory::create(std::shared_ptr<TextAccess> specificationAccess)
 {
-	std::shared_ptr<TreeFactory> factory = std::shared_ptr<TreeFactory>(new TreeFactory());
+	std::shared_ptr<TreeFactory> treeFactory = std::shared_ptr<TreeFactory>(new TreeFactory());
 
-	factory->m_document = std::make_shared<TiXmlDocument>();
-	factory->m_document->Parse(specificationAccess->getText().c_str(), 0, TIXML_ENCODING_UTF8);
-	if (factory->m_document->Error())
+	treeFactory->m_document = std::make_shared<TiXmlDocument>();
+	treeFactory->m_document->Parse(specificationAccess->getText().c_str(), 0, TIXML_ENCODING_UTF8);
+	if (treeFactory->m_document->Error())
 	{
-		LOG_ERROR(std::string("Error occurred while parsing XML: ") + factory->m_document->ErrorDesc());
+		LOG_ERROR(std::string("Error occurred while parsing XML: ") + treeFactory->m_document->ErrorDesc());
 		return std::shared_ptr<TreeFactory>();
 	}
 
-	initializeRootMap(factory);
-	initializeModules(factory);
+	{
+		std::shared_ptr<ActionFactoryEvaluateTree> factory = std::make_shared<ActionFactoryEvaluateTree>();
+		treeFactory->m_taskFactories[factory->getTaskName()] = factory;
+	}
 
-	return factory;
+	initializeModules(treeFactory);
+	initializeRootMap(treeFactory);
+
+	return treeFactory;
 }
 
 TreeFactory::~TreeFactory()
@@ -103,6 +109,10 @@ std::shared_ptr<Task> TreeFactory::createTreeForElement(TiXmlElement* element) c
 	{
 		decorator->setChild(createTreeForElement(element->FirstChildElement()));
 	}
+	else if (std::shared_ptr<ActionEvaluateTree> actionEvaluateTree = std::dynamic_pointer_cast<ActionEvaluateTree>(task))
+	{
+		actionEvaluateTree->setTreeFactory(shared_from_this());
+	}
 
 	return task;
 }
@@ -139,7 +149,7 @@ void TreeFactory::initializeRootMap(std::shared_ptr<TreeFactory> factory)
 			TiXmlElement* element = docHandle.FirstChild("BEHAVIOR_SPECIFICATION").FirstChild("TREES").FirstChild("ROOT").ToElement();
 			element;
 			element = element->NextSiblingElement("ROOT")
-		)
+			)
 		{
 			factory->m_rootMap[getAttributeValue(element, "name")] = element->ToElement();
 		}
@@ -163,7 +173,7 @@ void TreeFactory::initializeModules(std::shared_ptr<TreeFactory> factory)
 			std::function<void(std::shared_ptr<TreeFactory>)> registerModule = Utility::loadFunctionFromDynamicLibrary<void, std::shared_ptr<TreeFactory>>(
 				libraryFilePath,
 				"registerModule"
-			);
+				);
 
 			registerModule(factory);
 		}

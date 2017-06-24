@@ -31,6 +31,7 @@
     <ClCompile Include="src\behavior_tree\task\Composite.cpp" />
     <ClCompile Include="src\behavior_tree\task\Decorator.cpp" />
     <ClCompile Include="src\behavior_tree\task\Task.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionEvaluateTree.cpp" />
     <ClCompile Include="src\utility\logging\ConsoleLogger.cpp" />
     <ClCompile Include="src\utility\logging\FileLogger.cpp" />
     <ClCompile Include="src\utility\logging\Logger.cpp" />
@@ -51,6 +52,7 @@
     <ClInclude Include="src\behavior_tree\task\Composite.h" />
     <ClInclude Include="src\behavior_tree\task\Decorator.h" />
     <ClInclude Include="src\behavior_tree\task\Task.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionEvaluateTree.h" />
     <ClInclude Include="src\utility\Singleton.h" />
     <ClInclude Include="src\utility\UtilityLibrary.h" />
     <ClInclude Include="src\utility\logging\ConsoleLogger.h" />
