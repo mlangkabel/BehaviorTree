@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleAudio.cpp">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionPlayAudioFile.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleAudio.h">
+      <Filter>src\behavior_tree\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionPlayAudioFile.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{6bd35fb0-f55b-45c2-8a32-2b3b8bac98e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree">
+      <UniqueIdentifier>{654b4d60-ab45-4159-9633-2509ea8431b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\factory">
+      <UniqueIdentifier>{6e4d4f91-ccdb-4816-97c3-d0c4cd38833a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behavior_tree\task">
+      <UniqueIdentifier>{d4b18480-300a-4e7a-8998-7fc0b85087fa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
