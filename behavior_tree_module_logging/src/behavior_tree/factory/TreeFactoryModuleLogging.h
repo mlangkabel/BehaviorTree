@@ -5,14 +5,17 @@
 
 #include "behavior_tree/factory/TreeFactoryModule.h"
 
-class TreeFactory;
-
-extern "C" __declspec(dllexport) void registerModule(std::shared_ptr<TreeFactory>);
-
-class TreeFactoryModuleLogging : public TreeFactoryModule
+namespace BehaviorTree
 {
-public:
-	TreeFactoryModuleLogging();
-};
+	class TreeFactory;
+
+	extern "C" __declspec(dllexport) void registerModule(std::shared_ptr<TreeFactory>);
+
+	class TreeFactoryModuleLogging : public TreeFactoryModule
+	{
+	public:
+		TreeFactoryModuleLogging();
+	};
+}
 
 #endif // TREE_FACTORY_MODULE_LOGGING_H

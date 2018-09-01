@@ -5,13 +5,16 @@
 
 #include "behavior_tree/task/Task.h"
 
-class Decorator : public Task
+namespace BehaviorTree
 {
-public:
-	void setChild(std::shared_ptr<Task> child);
+	class Decorator : public Task
+	{
+	public:
+		void setChild(std::shared_ptr<Task> child);
 
-protected:
-	std::shared_ptr<Task> m_child;
-};
+	protected:
+		std::shared_ptr<Task> m_child;
+	};
+}
 
 #endif // DECORATOR_H

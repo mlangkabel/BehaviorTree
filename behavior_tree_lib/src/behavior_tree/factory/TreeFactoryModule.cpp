@@ -1,15 +1,18 @@
 #include "behavior_tree/factory/TreeFactoryModule.h"
 
-TreeFactoryModule::TreeFactoryModule()
+namespace BehaviorTree
 {
-}
+	TreeFactoryModule::TreeFactoryModule()
+	{
+	}
 
-std::vector<std::shared_ptr<TaskFactoryBase>> TreeFactoryModule::getFactories() const
-{
-	return m_taskFactories;
-}
+	std::vector<std::shared_ptr<TaskFactoryBase>> TreeFactoryModule::getFactories() const
+	{
+		return m_taskFactories;
+	}
 
-void TreeFactoryModule::addFactory(std::shared_ptr<TaskFactoryBase> taskFactory)
-{
-	m_taskFactories.push_back(taskFactory);
+	void TreeFactoryModule::addFactory(std::shared_ptr<TaskFactoryBase> taskFactory)
+	{
+		m_taskFactories.push_back(taskFactory);
+	}
 }

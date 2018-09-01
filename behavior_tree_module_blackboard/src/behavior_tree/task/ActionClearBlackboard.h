@@ -4,22 +4,25 @@
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/task/Action.h"
 
-class ActionClearBlackboard;
-
-class ActionFactoryClearBlackboard : public TaskFactory<ActionClearBlackboard>
+namespace BehaviorTree
 {
-public:
-	ActionFactoryClearBlackboard()
-		: TaskFactory<ActionClearBlackboard>("CLEAR_BLACKBOARD")
-	{}
-};
+	class ActionClearBlackboard;
 
-class ActionClearBlackboard : public Action
-{
-public:
-	ActionClearBlackboard();
+	class ActionFactoryClearBlackboard : public TaskFactory<ActionClearBlackboard>
+	{
+	public:
+		ActionFactoryClearBlackboard()
+			: TaskFactory<ActionClearBlackboard>("CLEAR_BLACKBOARD")
+		{}
+	};
 
-	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
-};
+	class ActionClearBlackboard : public Action
+	{
+	public:
+		ActionClearBlackboard();
+
+		virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+	};
+}
 
 #endif // ACTION_CLEAR_BLACKBOARD_H

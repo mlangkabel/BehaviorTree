@@ -6,19 +6,22 @@
 
 #include "behavior_tree/factory/TaskFactory.h"
 
-class TreeFactoryModule
+namespace BehaviorTree
 {
-public:
-	TreeFactoryModule();
-	virtual ~TreeFactoryModule() = default;
+	class TreeFactoryModule
+	{
+	public:
+		TreeFactoryModule();
+		virtual ~TreeFactoryModule() = default;
 
-	std::vector<std::shared_ptr<TaskFactoryBase>> getFactories() const;
+		std::vector<std::shared_ptr<TaskFactoryBase>> getFactories() const;
 
-protected:
-	void addFactory(std::shared_ptr<TaskFactoryBase> taskFactory);
+	protected:
+		void addFactory(std::shared_ptr<TaskFactoryBase> taskFactory);
 
-private:
-	std::vector<std::shared_ptr<TaskFactoryBase>> m_taskFactories;
-};
+	private:
+		std::vector<std::shared_ptr<TaskFactoryBase>> m_taskFactories;
+	};
+}
 
 #endif // TREE_FACTORY_MODULE_H

@@ -7,22 +7,25 @@
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/task/Composite.h"
 
-class CompositeSequence;
-
-class CompositeFactorySequence : public TaskFactory<CompositeSequence>
+namespace BehaviorTree
 {
-public:
-	CompositeFactorySequence()
-		: TaskFactory<CompositeSequence>("SEQUENCE")
-	{}
-};
+	class CompositeSequence;
 
-class CompositeSequence : public Composite
-{
-public:
-	CompositeSequence();
+	class CompositeFactorySequence : public TaskFactory<CompositeSequence>
+	{
+	public:
+		CompositeFactorySequence()
+			: TaskFactory<CompositeSequence>("SEQUENCE")
+		{}
+	};
 
-	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
-};
+	class CompositeSequence : public Composite
+	{
+	public:
+		CompositeSequence();
+
+		virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+	};
+}
 
 #endif // COMPOSITE_SEQUENCE_H

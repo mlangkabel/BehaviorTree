@@ -2,13 +2,16 @@
 
 #include "utility/UtilityKeyboard.h"
 
-ActionSimulateKeyUp::ActionSimulateKeyUp(const int keycode)
-	: m_keycode(keycode)
+namespace BehaviorTree
 {
-}
+	ActionSimulateKeyUp::ActionSimulateKeyUp(const int keycode)
+		: m_keycode(keycode)
+	{
+	}
 
-Task::StatusType ActionSimulateKeyUp::evaluate(std::shared_ptr<Blackboard> blackboard)
-{
-	utility::setKeyUp(m_keycode);
-	return STATUS_SUCCESS;
+	Task::StatusType ActionSimulateKeyUp::evaluate(std::shared_ptr<Blackboard> blackboard)
+	{
+		utility::setKeyUp(m_keycode);
+		return STATUS_SUCCESS;
+	}
 }

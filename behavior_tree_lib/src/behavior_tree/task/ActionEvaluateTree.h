@@ -4,29 +4,32 @@
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/task/Task.h"
 
-class ActionEvaluateTree;
-class TreeFactory;
-
-class ActionFactoryEvaluateTree : public TaskFactory<ActionEvaluateTree, std::string>
+namespace BehaviorTree
 {
-public:
-	ActionFactoryEvaluateTree()
-		: TaskFactory<ActionEvaluateTree, std::string>("EVALUATE_TREE", "name")
-	{}
-};
+	class ActionEvaluateTree;
+	class TreeFactory;
 
-class ActionEvaluateTree : public Task
-{
-public:
-	ActionEvaluateTree(std::string name);
+	class ActionFactoryEvaluateTree : public TaskFactory<ActionEvaluateTree, std::string>
+	{
+	public:
+		ActionFactoryEvaluateTree()
+			: TaskFactory<ActionEvaluateTree, std::string>("EVALUATE_TREE", "name")
+		{}
+	};
 
-	void setTreeFactory(std::shared_ptr<const TreeFactory> treeFactory);
+	class ActionEvaluateTree : public Task
+	{
+	public:
+		ActionEvaluateTree(std::string name);
 
-	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+		void setTreeFactory(std::shared_ptr<const TreeFactory> treeFactory);
 
-private:
-	std::string m_name;
-	std::shared_ptr<const TreeFactory> m_treeFactory;
-};
+		virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+
+	private:
+		std::string m_name;
+		std::shared_ptr<const TreeFactory> m_treeFactory;
+	};
+}
 
 #endif // ACTION_EVALUATE_TREE_H

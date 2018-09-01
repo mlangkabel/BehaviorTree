@@ -6,13 +6,16 @@
 
 #include "behavior_tree/task/Task.h"
 
-class Composite : public Task
+namespace BehaviorTree
 {
-public:
-	void addChild(std::shared_ptr<Task> child);
+	class Composite : public Task
+	{
+	public:
+		void addChild(std::shared_ptr<Task> child);
 
-protected:
-	std::vector<std::shared_ptr<Task>> m_children;
-};
+	protected:
+		std::vector<std::shared_ptr<Task>> m_children;
+	};
+}
 
 #endif // COMPOSITE_H

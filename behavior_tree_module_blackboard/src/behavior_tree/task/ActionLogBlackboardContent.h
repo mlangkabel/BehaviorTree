@@ -4,22 +4,25 @@
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/task/Action.h"
 
-class ActionLogBlackboardContent;
-
-class ActionFactoryLogBlackboardContent : public TaskFactory<ActionLogBlackboardContent>
+namespace BehaviorTree
 {
-public:
-	ActionFactoryLogBlackboardContent()
-		: TaskFactory<ActionLogBlackboardContent>("LOG_BLACKBOARD_CONTENT")
-	{}
-};
+	class ActionLogBlackboardContent;
 
-class ActionLogBlackboardContent : public Action
-{
-public:
-	ActionLogBlackboardContent();
+	class ActionFactoryLogBlackboardContent : public TaskFactory<ActionLogBlackboardContent>
+	{
+	public:
+		ActionFactoryLogBlackboardContent()
+			: TaskFactory<ActionLogBlackboardContent>("LOG_BLACKBOARD_CONTENT")
+		{}
+	};
 
-	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
-};
+	class ActionLogBlackboardContent : public Action
+	{
+	public:
+		ActionLogBlackboardContent();
+
+		virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+	};
+}
 
 #endif // ACTION_LOG_BLACKBOARD_CONTENT_H

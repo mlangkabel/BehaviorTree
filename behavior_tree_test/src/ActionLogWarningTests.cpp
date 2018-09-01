@@ -6,7 +6,7 @@
 #include "utility/logging/StringLogger.h"
 #include "utility/TextAccess.h"
 
-namespace behavior_tree_test
+namespace BehaviorTree
 {
 	using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

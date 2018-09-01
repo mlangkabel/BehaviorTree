@@ -8,9 +8,9 @@ namespace Microsoft
 	{
 		namespace CppUnitTestFramework
 		{
-			template<> static std::wstring ToString<Task::StatusType>(const Task::StatusType& t)
+			template<> static std::wstring ToString<BehaviorTree::Task::StatusType>(const BehaviorTree::Task::StatusType& t)
 			{
-				if (t == Task::STATUS_SUCCESS)
+				if (t == BehaviorTree::Task::STATUS_SUCCESS)
 				{
 					return L"STATUS_SUCCESS";
 				}

@@ -8,32 +8,36 @@
 class TiXmlDocument;
 class TiXmlElement;
 
-class Task;
-class TaskFactoryBase;
 class TextAccess;
-class TreeFactoryModule;
 
-class TreeFactory : public std::enable_shared_from_this<TreeFactory>
+namespace BehaviorTree
 {
-public:
-	static std::shared_ptr<TreeFactory> create(std::shared_ptr<TextAccess> specificationAccess);
+	class Task;
+	class TaskFactoryBase;
+	class TreeFactoryModule;
 
-	void addModule(std::shared_ptr<TreeFactoryModule> module);
+	class TreeFactory : public std::enable_shared_from_this<TreeFactory>
+	{
+	public:
+		static std::shared_ptr<TreeFactory> create(std::shared_ptr<TextAccess> specificationAccess);
 
-	std::shared_ptr<Task> createBehaviorTree(const std::string& rootName) const;
+		void addModule(std::shared_ptr<TreeFactoryModule> module);
 
-private:
-	static void initializeRootMap(std::shared_ptr<TreeFactory> factory);
-	static void initializeModules(std::shared_ptr<TreeFactory> factory);
+		std::shared_ptr<Task> createBehaviorTree(const std::string& rootName) const;
 
-	TreeFactory();
+	private:
+		static void initializeRootMap(std::shared_ptr<TreeFactory> factory);
+		static void initializeModules(std::shared_ptr<TreeFactory> factory);
 
-	std::shared_ptr<Task> createTreeForElement(TiXmlElement* element) const;
-	std::shared_ptr<Task> createTaskForElement(TiXmlElement* element) const;
+		TreeFactory();
 
-	std::shared_ptr<TiXmlDocument> m_document;
-	std::map<std::string, TiXmlElement*> m_rootMap;
-	std::map<std::string, std::shared_ptr<TaskFactoryBase>> m_taskFactories;
-};
+		std::shared_ptr<Task> createTreeForElement(TiXmlElement* element) const;
+		std::shared_ptr<Task> createTaskForElement(TiXmlElement* element) const;
+
+		std::shared_ptr<TiXmlDocument> m_document;
+		std::map<std::string, TiXmlElement*> m_rootMap;
+		std::map<std::string, std::shared_ptr<TaskFactoryBase>> m_taskFactories;
+	};
+}
 
 #endif // TREE_FACTORY_H

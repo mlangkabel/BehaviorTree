@@ -5,14 +5,17 @@
 #include "behavior_tree/task/ActionSimulateMouseButtonDown.h"
 #include "behavior_tree/task/ActionSimulateMouseButtonUp.h"
 
-extern "C" void registerModule(std::shared_ptr<TreeFactory> factory)
+namespace BehaviorTree
 {
-	factory->addModule(std::make_shared<TreeFactoryModuleMouse>());
-}
+	extern "C" void registerModule(std::shared_ptr<TreeFactory> factory)
+	{
+		factory->addModule(std::make_shared<TreeFactoryModuleMouse>());
+	}
 
-TreeFactoryModuleMouse::TreeFactoryModuleMouse()
-{
-	addFactory(std::make_shared<ActionFactorySetMouseCursorPosition>());
-	addFactory(std::make_shared<ActionFactorySimulateMouseButtonDown>());
-	addFactory(std::make_shared<ActionFactorySimulateMouseButtonUp>());
+	TreeFactoryModuleMouse::TreeFactoryModuleMouse()
+	{
+		addFactory(std::make_shared<ActionFactorySetMouseCursorPosition>());
+		addFactory(std::make_shared<ActionFactorySimulateMouseButtonDown>());
+		addFactory(std::make_shared<ActionFactorySimulateMouseButtonUp>());
+	}
 }

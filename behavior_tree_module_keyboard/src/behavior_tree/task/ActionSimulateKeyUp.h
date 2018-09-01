@@ -4,28 +4,31 @@
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/task/Action.h"
 
-class ActionSimulateKeyUp;
-
-class ActionFactorySimulateKeyUp : public TaskFactory<ActionSimulateKeyUp, int>
+namespace BehaviorTree
 {
-public:
-	ActionFactorySimulateKeyUp()
-		: TaskFactory<ActionSimulateKeyUp, int>("SIMULATE_KEY_UP", "keycode")
-	{}
-};
+	class ActionSimulateKeyUp;
 
-/*
-keycodes map according to this table: https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
-*/
-class ActionSimulateKeyUp : public Action
-{
-public:
-	ActionSimulateKeyUp(const int keycode);
+	class ActionFactorySimulateKeyUp : public TaskFactory<ActionSimulateKeyUp, int>
+	{
+	public:
+		ActionFactorySimulateKeyUp()
+			: TaskFactory<ActionSimulateKeyUp, int>("SIMULATE_KEY_UP", "keycode")
+		{}
+	};
 
-	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+	/*
+	keycodes map according to this table: https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx
+	*/
+	class ActionSimulateKeyUp : public Action
+	{
+	public:
+		ActionSimulateKeyUp(const int keycode);
 
-private:
-	const int m_keycode;
-};
+		virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+
+	private:
+		const int m_keycode;
+	};
+}
 
 #endif // ACTION_SIMULATE_KEY_UP_H

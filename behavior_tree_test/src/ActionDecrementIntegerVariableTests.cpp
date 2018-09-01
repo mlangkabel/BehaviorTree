@@ -7,7 +7,7 @@
 #include "utility/TextAccess.h"
 #include "UtilityTest.h"
 
-namespace behavior_tree_test
+namespace BehaviorTree
 {
 	using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

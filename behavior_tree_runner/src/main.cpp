@@ -12,7 +12,7 @@ int main()
 
 	LOG_INFO("Starting up application.");
 
-	std::shared_ptr<TreeFactory> treeFactory = TreeFactory::create(TextAccess::createFromString(
+	std::shared_ptr<BehaviorTree::TreeFactory> treeFactory = BehaviorTree::TreeFactory::create(TextAccess::createFromString(
 		"<BEHAVIOR_SPECIFICATION>"
 		"	<MODULES>"
 		"		<MODULE name=\"core\" />"
@@ -34,11 +34,11 @@ int main()
 		"</BEHAVIOR_SPECIFICATION>"
 	));
 
-	std::shared_ptr<Task> tree = treeFactory->createBehaviorTree("main");
+	std::shared_ptr<BehaviorTree::Task> tree = treeFactory->createBehaviorTree("main");
 
-	std::shared_ptr<Blackboard> blackboard = std::make_shared<Blackboard>();
+	std::shared_ptr<BehaviorTree::Blackboard> blackboard = std::make_shared<BehaviorTree::Blackboard>();
 
-	bool success = (tree->evaluate(blackboard) == Task::STATUS_SUCCESS);
+	bool success = (tree->evaluate(blackboard) == BehaviorTree::Task::STATUS_SUCCESS);
 
 	LOG_INFO(std::string("Behavior tree evaluation has been ") + (success ? "" : "un") + "successful.");
 

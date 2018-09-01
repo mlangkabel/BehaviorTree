@@ -2,14 +2,17 @@
 
 #include <Windows.h>
 
-ActionSetMouseCursorPosition::ActionSetMouseCursorPosition(const int x, const int y)
-	: m_x(x)
-	, m_y(y)
+namespace BehaviorTree
 {
-}
+	ActionSetMouseCursorPosition::ActionSetMouseCursorPosition(const int x, const int y)
+		: m_x(x)
+		, m_y(y)
+	{
+	}
 
-Task::StatusType ActionSetMouseCursorPosition::evaluate(std::shared_ptr<Blackboard> blackboard)
-{
-	SetCursorPos(m_x, m_y);
-	return STATUS_SUCCESS;
+	Task::StatusType ActionSetMouseCursorPosition::evaluate(std::shared_ptr<Blackboard> blackboard)
+	{
+		SetCursorPos(m_x, m_y);
+		return STATUS_SUCCESS;
+	}
 }

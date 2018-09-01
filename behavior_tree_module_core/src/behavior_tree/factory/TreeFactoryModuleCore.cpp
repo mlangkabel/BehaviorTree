@@ -5,14 +5,17 @@
 #include "behavior_tree/task/CompositeSelector.h"
 #include "behavior_tree/task/CompositeSequence.h"
 
-extern "C" void registerModule(std::shared_ptr<TreeFactory> factory)
+namespace BehaviorTree
 {
-	factory->addModule(std::make_shared<TreeFactoryModuleCore>());
-}
+	extern "C" void registerModule(std::shared_ptr<TreeFactory> factory)
+	{
+		factory->addModule(std::make_shared<TreeFactoryModuleCore>());
+	}
 
-TreeFactoryModuleCore::TreeFactoryModuleCore()
-{
-	addFactory(std::make_shared<DecoratorFactoryRoot>());
-	addFactory(std::make_shared<CompositeFactorySelector>());
-	addFactory(std::make_shared<CompositeFactorySequence>());
+	TreeFactoryModuleCore::TreeFactoryModuleCore()
+	{
+		addFactory(std::make_shared<DecoratorFactoryRoot>());
+		addFactory(std::make_shared<CompositeFactorySelector>());
+		addFactory(std::make_shared<CompositeFactorySequence>());
+	}
 }

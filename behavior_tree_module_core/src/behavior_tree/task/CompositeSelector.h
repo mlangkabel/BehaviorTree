@@ -7,22 +7,25 @@
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/task/Composite.h"
 
-class CompositeSelector;
-
-class CompositeFactorySelector : public TaskFactory<CompositeSelector>
+namespace BehaviorTree
 {
-public:
-	CompositeFactorySelector()
-		: TaskFactory<CompositeSelector>("SELECTOR")
-	{}
-};
+	class CompositeSelector;
 
-class CompositeSelector : public Composite
-{
-public:
-	CompositeSelector();
+	class CompositeFactorySelector : public TaskFactory<CompositeSelector>
+	{
+	public:
+		CompositeFactorySelector()
+			: TaskFactory<CompositeSelector>("SELECTOR")
+		{}
+	};
 
-	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
-};
+	class CompositeSelector : public Composite
+	{
+	public:
+		CompositeSelector();
+
+		virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+	};
+}
 
 #endif // COMPOSITE_SELECTOR_H

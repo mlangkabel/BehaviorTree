@@ -3,10 +3,13 @@
 
 #include "behavior_tree/task/Task.h"
 
-class Action : public Task
+namespace BehaviorTree
 {
-public:
-	virtual ~Action() = default;
-};
+	class Action : public Task
+	{
+	public:
+		virtual ~Action() = default;
+	};
+}
 
 #endif // ACTION_H

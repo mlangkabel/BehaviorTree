@@ -4,25 +4,28 @@
 #include "behavior_tree/factory/TaskFactory.h"
 #include "behavior_tree/task/Action.h"
 
-class ActionLogError;
-
-class ActionFactoryLogError : public TaskFactory<ActionLogError, std::string>
+namespace BehaviorTree
 {
-public:
-	ActionFactoryLogError()
-		: TaskFactory<ActionLogError, std::string>("LOG_ERROR", "message")
-	{}
-};
+	class ActionLogError;
 
-class ActionLogError : public Action
-{
-public:
-	ActionLogError(const std::string &message);
+	class ActionFactoryLogError : public TaskFactory<ActionLogError, std::string>
+	{
+	public:
+		ActionFactoryLogError()
+			: TaskFactory<ActionLogError, std::string>("LOG_ERROR", "message")
+		{}
+	};
 
-	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+	class ActionLogError : public Action
+	{
+	public:
+		ActionLogError(const std::string &message);
 
-private:
-	const std::string m_message;
-};
+		virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
+
+	private:
+		const std::string m_message;
+	};
+}
 
 #endif // ACTION_LOG_ERROR_H
