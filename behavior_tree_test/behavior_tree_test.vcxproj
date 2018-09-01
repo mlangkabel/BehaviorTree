@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\ActionCheckVariableEqualsTests.cpp" />
     <ClCompile Include="src\ActionCheckVariableExistsTests.cpp" />
+    <ClCompile Include="src\ActionClearBlackboardTests.cpp" />
     <ClCompile Include="src\ActionDecrementIntegerVariableTests.cpp" />
     <ClCompile Include="src\ActionIncrementIntegerVariableTests.cpp" />
     <ClCompile Include="src\ActionLogErrorTests.cpp" />

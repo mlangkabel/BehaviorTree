@@ -39,6 +39,9 @@
     <ClCompile Include="src\behavior_tree\task\ActionLogBlackboardContent.cpp">
       <Filter>src\behavior_tree\task</Filter>
     </ClCompile>
+    <ClCompile Include="src\behavior_tree\task\ActionClearBlackboard.cpp">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleBlackboard.h">
@@ -63,6 +66,9 @@
       <Filter>src\behavior_tree\task</Filter>
     </ClInclude>
     <ClInclude Include="src\behavior_tree\task\ActionLogBlackboardContent.h">
+      <Filter>src\behavior_tree\task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\behavior_tree\task\ActionClearBlackboard.h">
       <Filter>src\behavior_tree\task</Filter>
     </ClInclude>
   </ItemGroup>

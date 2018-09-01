@@ -26,6 +26,7 @@ public:
 	bool clear(const std::string& key);
 
 	std::vector<std::string> getKeys() const;
+	void clear(bool recursive);
 
 private:
 	struct BlackboardData

@@ -22,4 +22,4 @@ public:
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 };
 
-#endif // ACTION_SET_STRING_VARIABLE_H
+#endif // ACTION_LOG_BLACKBOARD_CONTENT_H

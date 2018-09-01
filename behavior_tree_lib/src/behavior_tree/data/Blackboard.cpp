@@ -55,3 +55,12 @@ std::vector<std::string> Blackboard::getKeys() const
 	}
 	return keys;
 }
+
+void Blackboard::clear(bool recursive)
+{
+	m_values.clear();
+	if (m_parent && recursive)
+	{
+		m_parent->clear(recursive);
+	}
+}

@@ -22,6 +22,7 @@
     <ClCompile Include="src\behavior_tree\factory\TreeFactoryModuleBlackboard.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionCheckVariableExists.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionCheckVariableEquals.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionClearBlackboard.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionDecrementIntegerVariable.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionIncrementIntegerVariable.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionLogBlackboardContent.cpp" />
@@ -32,6 +33,7 @@
     <ClInclude Include="src\behavior_tree\factory\TreeFactoryModuleBlackboard.h" />
     <ClInclude Include="src\behavior_tree\task\ActionCheckVariableExists.h" />
     <ClInclude Include="src\behavior_tree\task\ActionCheckVariableEquals.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionClearBlackboard.h" />
     <ClInclude Include="src\behavior_tree\task\ActionDecrementIntegerVariable.h" />
     <ClInclude Include="src\behavior_tree\task\ActionIncrementIntegerVariable.h" />
     <ClInclude Include="src\behavior_tree\task\ActionLogBlackboardContent.h" />
