@@ -15,7 +15,7 @@ std::vector<std::string> TaskFactoryBase::getParameterNames() const
 	return m_parameterNames;
 }
 
-void TaskFactoryBase::addParameterName(const std::string &patameterName)
+void TaskFactoryBase::addParameterName(const std::string &parameterName)
 {
-	m_parameterNames.push_back(patameterName);
+	m_parameterNames.push_back(parameterName);
 }

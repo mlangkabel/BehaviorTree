@@ -21,7 +21,7 @@ public:
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters) = 0;
 
 protected:
-	void addParameterName(const std::string &patameterName);
+	void addParameterName(const std::string &parameterName);
 
 private:
 	const std::string m_taskName;
