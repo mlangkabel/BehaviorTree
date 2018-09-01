@@ -19,10 +19,6 @@ std::shared_ptr<TextAccess> TextAccess::createFromString(const std::string& text
 	return result;
 }
 
-TextAccess::~TextAccess()
-{
-}
-
 unsigned int TextAccess::getLineCount() const
 {
 	return m_lines.size();

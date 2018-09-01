@@ -18,7 +18,6 @@ class ActionLogInfo : public Action
 {
 public:
 	ActionLogInfo(const std::string &message);
-	virtual ~ActionLogInfo();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

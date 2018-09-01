@@ -16,7 +16,3 @@ TreeFactoryModuleCore::TreeFactoryModuleCore()
 	addFactory(std::make_shared<CompositeFactorySelector>());
 	addFactory(std::make_shared<CompositeFactorySequence>());
 }
-
-TreeFactoryModuleCore::~TreeFactoryModuleCore()
-{
-}

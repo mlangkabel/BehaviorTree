@@ -6,10 +6,6 @@ ActionSetIntegerVariable::ActionSetIntegerVariable(const std::string& name, cons
 {
 }
 
-ActionSetIntegerVariable::~ActionSetIntegerVariable()
-{
-}
-
 Task::StatusType ActionSetIntegerVariable::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	blackboard->set(m_name, m_value);

@@ -18,7 +18,6 @@ class ActionLogError : public Action
 {
 public:
 	ActionLogError(const std::string &message);
-	virtual ~ActionLogError();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

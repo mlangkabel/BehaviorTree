@@ -6,10 +6,6 @@ ActionCheckVariableEquals::ActionCheckVariableEquals(const std::string& name, co
 {
 }
 
-ActionCheckVariableEquals::~ActionCheckVariableEquals()
-{
-}
-
 Task::StatusType ActionCheckVariableEquals::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	if (blackboard->exists(m_name))

@@ -13,7 +13,6 @@ class TreeFactoryModuleKeyboard : public TreeFactoryModule
 {
 public:
 	TreeFactoryModuleKeyboard();
-	virtual ~TreeFactoryModuleKeyboard();
 };
 
 #endif // TREE_FACTORY_MODULE_KEYBOARD_H

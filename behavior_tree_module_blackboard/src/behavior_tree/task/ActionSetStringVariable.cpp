@@ -6,10 +6,6 @@ ActionSetStringVariable::ActionSetStringVariable(const std::string& name, const 
 {
 }
 
-ActionSetStringVariable::~ActionSetStringVariable()
-{
-}
-
 Task::StatusType ActionSetStringVariable::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	blackboard->set(m_name, m_value);

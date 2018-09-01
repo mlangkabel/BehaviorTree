@@ -7,10 +7,6 @@ ActionSimulateMouseButtonDown::ActionSimulateMouseButtonDown(const int buttonId)
 {
 }
 
-ActionSimulateMouseButtonDown::~ActionSimulateMouseButtonDown()
-{
-}
-
 Task::StatusType ActionSimulateMouseButtonDown::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	INPUT input = { 0 };

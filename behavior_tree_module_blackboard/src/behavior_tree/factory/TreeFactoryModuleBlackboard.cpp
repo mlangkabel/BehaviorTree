@@ -24,7 +24,3 @@ TreeFactoryModuleBlackboard::TreeFactoryModuleBlackboard()
 	addFactory(std::make_shared<ActionFactorySetIntegerVariable>());
 	addFactory(std::make_shared<ActionFactorySetStringVariable>());
 }
-
-TreeFactoryModuleBlackboard::~TreeFactoryModuleBlackboard()
-{
-}

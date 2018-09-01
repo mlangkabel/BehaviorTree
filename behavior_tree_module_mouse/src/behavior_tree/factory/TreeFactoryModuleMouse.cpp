@@ -16,7 +16,3 @@ TreeFactoryModuleMouse::TreeFactoryModuleMouse()
 	addFactory(std::make_shared<ActionFactorySimulateMouseButtonDown>());
 	addFactory(std::make_shared<ActionFactorySimulateMouseButtonUp>());
 }
-
-TreeFactoryModuleMouse::~TreeFactoryModuleMouse()
-{
-}

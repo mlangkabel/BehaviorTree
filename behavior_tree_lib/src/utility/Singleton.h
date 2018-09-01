@@ -6,7 +6,7 @@
 class Singleton
 {
 public:
-	virtual ~Singleton();
+	virtual ~Singleton() = default;
 	virtual std::string getSingletonName() = 0;
 };
 

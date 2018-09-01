@@ -18,7 +18,6 @@ class ActionSetMouseCursorPosition : public Action
 {
 public:
 	ActionSetMouseCursorPosition(const int x, const int y);
-	virtual ~ActionSetMouseCursorPosition();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

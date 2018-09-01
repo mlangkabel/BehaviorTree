@@ -21,7 +21,6 @@ class CompositeSequence : public Composite
 {
 public:
 	CompositeSequence();
-	virtual ~CompositeSequence();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 };

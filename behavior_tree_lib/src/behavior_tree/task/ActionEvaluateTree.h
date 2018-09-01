@@ -19,7 +19,6 @@ class ActionEvaluateTree : public Task
 {
 public:
 	ActionEvaluateTree(std::string name);
-	virtual ~ActionEvaluateTree();
 
 	void setTreeFactory(std::shared_ptr<const TreeFactory> treeFactory);
 

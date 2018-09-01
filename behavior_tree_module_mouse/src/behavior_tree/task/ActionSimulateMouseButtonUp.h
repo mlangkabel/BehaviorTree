@@ -18,7 +18,6 @@ class ActionSimulateMouseButtonUp : public Action
 {
 public:
 	ActionSimulateMouseButtonUp(const int buttonId);
-	virtual ~ActionSimulateMouseButtonUp();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

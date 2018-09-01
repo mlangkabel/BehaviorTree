@@ -7,10 +7,6 @@ ActionLogInfo::ActionLogInfo(const std::string &message)
 {
 }
 
-ActionLogInfo::~ActionLogInfo()
-{
-}
-
 Task::StatusType ActionLogInfo::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	LOG_INFO(m_message);

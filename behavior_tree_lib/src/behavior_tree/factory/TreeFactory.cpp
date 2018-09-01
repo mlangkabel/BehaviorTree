@@ -53,10 +53,6 @@ std::shared_ptr<TreeFactory> TreeFactory::create(std::shared_ptr<TextAccess> spe
 	return treeFactory;
 }
 
-TreeFactory::~TreeFactory()
-{
-}
-
 void TreeFactory::addModule(std::shared_ptr<TreeFactoryModule> module)
 {
 	for (std::shared_ptr<TaskFactoryBase> factory : module->getFactories())

@@ -7,10 +7,6 @@ ActionLogWarning::ActionLogWarning(const std::string &message)
 {
 }
 
-ActionLogWarning::~ActionLogWarning()
-{
-}
-
 Task::StatusType ActionLogWarning::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	LOG_WARNING(m_message);

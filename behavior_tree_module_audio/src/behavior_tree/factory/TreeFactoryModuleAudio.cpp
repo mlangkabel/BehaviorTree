@@ -12,7 +12,3 @@ TreeFactoryModuleAudio::TreeFactoryModuleAudio()
 {
 	addFactory(std::make_shared<ActionFactoryPlayAudioFile>());
 }
-
-TreeFactoryModuleAudio::~TreeFactoryModuleAudio()
-{
-}

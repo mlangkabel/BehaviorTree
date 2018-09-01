@@ -21,7 +21,6 @@ class CompositeSelector : public Composite
 {
 public:
 	CompositeSelector();
-	virtual ~CompositeSelector();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 };

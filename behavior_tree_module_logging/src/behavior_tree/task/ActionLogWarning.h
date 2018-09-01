@@ -18,7 +18,6 @@ class ActionLogWarning : public Action
 {
 public:
 	ActionLogWarning(const std::string &message);
-	virtual ~ActionLogWarning();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

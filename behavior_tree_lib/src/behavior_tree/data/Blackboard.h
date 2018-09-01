@@ -14,7 +14,6 @@ class Blackboard
 public:
 	Blackboard();
 	Blackboard(std::shared_ptr<Blackboard> parent);
-	~Blackboard();
 
 	template <typename T>
 	void set(const std::string& key, const T& value);

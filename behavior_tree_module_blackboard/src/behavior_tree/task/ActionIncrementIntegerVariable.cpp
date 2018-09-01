@@ -5,10 +5,6 @@ ActionIncrementIntegerVariable::ActionIncrementIntegerVariable(const std::string
 {
 }
 
-ActionIncrementIntegerVariable::~ActionIncrementIntegerVariable()
-{
-}
-
 Task::StatusType ActionIncrementIntegerVariable::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	if (blackboard->exists(m_name))

@@ -18,7 +18,6 @@ class DecoratorRoot : public Decorator
 {
 public:
 	DecoratorRoot(const std::string &name);
-	virtual ~DecoratorRoot();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

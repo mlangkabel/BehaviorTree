@@ -4,10 +4,6 @@ TreeFactoryModule::TreeFactoryModule()
 {
 }
 
-TreeFactoryModule::~TreeFactoryModule()
-{
-}
-
 std::vector<std::shared_ptr<TaskFactoryBase>> TreeFactoryModule::getFactories() const
 {
 	return m_taskFactories;

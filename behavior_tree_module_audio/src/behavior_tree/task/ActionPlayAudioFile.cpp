@@ -8,10 +8,6 @@ ActionPlayAudioFile::ActionPlayAudioFile(const std::string& filePath)
 {
 }
 
-ActionPlayAudioFile::~ActionPlayAudioFile()
-{
-}
-
 Task::StatusType ActionPlayAudioFile::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	int ret = PlaySound(m_filePath.c_str(), NULL, SND_FILENAME);

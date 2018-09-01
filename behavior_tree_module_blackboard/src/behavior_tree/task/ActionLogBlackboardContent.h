@@ -18,7 +18,6 @@ class ActionLogBlackboardContent : public Action
 {
 public:
 	ActionLogBlackboardContent();
-	virtual ~ActionLogBlackboardContent();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 };

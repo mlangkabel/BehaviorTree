@@ -18,7 +18,6 @@ class ActionCheckVariableEquals : public Action
 {
 public:
 	ActionCheckVariableEquals(const std::string& name, const std::string& value);
-	virtual ~ActionCheckVariableEquals();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

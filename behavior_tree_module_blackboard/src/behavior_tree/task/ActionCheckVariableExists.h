@@ -18,7 +18,6 @@ class ActionCheckVariableExists : public Action
 {
 public:
 	ActionCheckVariableExists(const std::string& name);
-	virtual ~ActionCheckVariableExists();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

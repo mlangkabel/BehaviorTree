@@ -8,8 +8,6 @@
 class Decorator : public Task
 {
 public:
-	virtual ~Decorator();
-
 	void setChild(std::shared_ptr<Task> child);
 
 protected:

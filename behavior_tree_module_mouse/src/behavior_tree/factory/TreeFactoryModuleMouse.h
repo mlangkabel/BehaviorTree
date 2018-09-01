@@ -13,7 +13,6 @@ class TreeFactoryModuleMouse : public TreeFactoryModule
 {
 public:
 	TreeFactoryModuleMouse();
-	virtual ~TreeFactoryModuleMouse();
 };
 
 #endif // TREE_FACTORY_MODULE_MOUSE_H

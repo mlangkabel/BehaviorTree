@@ -13,7 +13,7 @@ class TaskFactoryBase
 {
 public:
 	TaskFactoryBase(const std::string &taskName);
-	virtual ~TaskFactoryBase();
+	virtual ~TaskFactoryBase() = default;
 
 	std::string getTaskName() const;
 	std::vector<std::string> getParameterNames() const;

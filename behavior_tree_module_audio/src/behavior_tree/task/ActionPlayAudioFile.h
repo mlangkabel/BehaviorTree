@@ -18,7 +18,6 @@ class ActionPlayAudioFile : public Action
 {
 public:
 	ActionPlayAudioFile(const std::string& filePath);
-	virtual ~ActionPlayAudioFile();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

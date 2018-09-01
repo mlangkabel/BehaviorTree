@@ -17,7 +17,6 @@ class TreeFactory : public std::enable_shared_from_this<TreeFactory>
 {
 public:
 	static std::shared_ptr<TreeFactory> create(std::shared_ptr<TextAccess> specificationAccess);
-	~TreeFactory();
 
 	void addModule(std::shared_ptr<TreeFactoryModule> module);
 

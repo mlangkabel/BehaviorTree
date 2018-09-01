@@ -13,7 +13,6 @@ class TreeFactoryModuleBlackboard : public TreeFactoryModule
 {
 public:
 	TreeFactoryModuleBlackboard();
-	virtual ~TreeFactoryModuleBlackboard();
 };
 
 #endif // TREE_FACTORY_MODULE_BLACKBOARD_H

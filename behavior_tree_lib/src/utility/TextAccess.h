@@ -11,7 +11,7 @@ public:
 	static std::shared_ptr<TextAccess> createFromFile(const std::string& filePath);
 	static std::shared_ptr<TextAccess> createFromString(const std::string& text);
 
-	virtual ~TextAccess();
+	virtual ~TextAccess() = default;
 
 	unsigned int getLineCount() const;
 

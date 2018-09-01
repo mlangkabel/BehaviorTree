@@ -21,7 +21,6 @@ class ActionSimulateKeyUp : public Action
 {
 public:
 	ActionSimulateKeyUp(const int keycode);
-	virtual ~ActionSimulateKeyUp();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

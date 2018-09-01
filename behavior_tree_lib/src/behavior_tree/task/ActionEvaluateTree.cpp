@@ -8,10 +8,6 @@ ActionEvaluateTree::ActionEvaluateTree(std::string name)
 {
 }
 
-ActionEvaluateTree::~ActionEvaluateTree()
-{
-}
-
 void ActionEvaluateTree::setTreeFactory(std::shared_ptr<const TreeFactory> treeFactory)
 {
 	m_treeFactory = treeFactory;

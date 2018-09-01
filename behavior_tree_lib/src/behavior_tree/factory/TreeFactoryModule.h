@@ -10,7 +10,7 @@ class TreeFactoryModule
 {
 public:
 	TreeFactoryModule();
-	virtual ~TreeFactoryModule();
+	virtual ~TreeFactoryModule() = default;
 
 	std::vector<std::shared_ptr<TaskFactoryBase>> getFactories() const;
 

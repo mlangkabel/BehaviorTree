@@ -7,10 +7,6 @@ ActionSimulateKeyDown::ActionSimulateKeyDown(const int keycode)
 {
 }
 
-ActionSimulateKeyDown::~ActionSimulateKeyDown()
-{
-}
-
 Task::StatusType ActionSimulateKeyDown::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	utility::setKeyDown(m_keycode);

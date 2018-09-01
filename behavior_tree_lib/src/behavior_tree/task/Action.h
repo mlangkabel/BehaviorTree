@@ -6,7 +6,7 @@
 class Action : public Task
 {
 public:
-	virtual ~Action();
+	virtual ~Action() = default;
 };
 
 #endif // ACTION_H

@@ -5,10 +5,6 @@ ActionDecrementIntegerVariable::ActionDecrementIntegerVariable(const std::string
 {
 }
 
-ActionDecrementIntegerVariable::~ActionDecrementIntegerVariable()
-{
-}
-
 Task::StatusType ActionDecrementIntegerVariable::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	if (blackboard->exists(m_name))

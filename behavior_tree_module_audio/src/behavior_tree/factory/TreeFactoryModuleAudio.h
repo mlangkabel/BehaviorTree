@@ -13,7 +13,6 @@ class TreeFactoryModuleAudio : public TreeFactoryModule
 {
 public:
 	TreeFactoryModuleAudio();
-	virtual ~TreeFactoryModuleAudio();
 };
 
 #endif // TREE_FACTORY_MODULE_AUDIO_H

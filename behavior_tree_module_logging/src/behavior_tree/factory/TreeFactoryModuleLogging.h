@@ -13,7 +13,6 @@ class TreeFactoryModuleLogging : public TreeFactoryModule
 {
 public:
 	TreeFactoryModuleLogging();
-	virtual ~TreeFactoryModuleLogging();
 };
 
 #endif // TREE_FACTORY_MODULE_LOGGING_H

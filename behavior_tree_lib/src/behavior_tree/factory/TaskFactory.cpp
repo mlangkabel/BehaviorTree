@@ -5,10 +5,6 @@ TaskFactoryBase::TaskFactoryBase(const std::string &taskName)
 {
 }
 
-TaskFactoryBase::~TaskFactoryBase()
-{
-}
-
 std::string TaskFactoryBase::getTaskName() const
 {
 	return m_taskName;

@@ -18,7 +18,6 @@ class ActionDecrementIntegerVariable : public Action
 {
 public:
 	ActionDecrementIntegerVariable(const std::string& name);
-	virtual ~ActionDecrementIntegerVariable();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

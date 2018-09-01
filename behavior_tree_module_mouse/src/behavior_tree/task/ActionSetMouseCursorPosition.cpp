@@ -8,10 +8,6 @@ ActionSetMouseCursorPosition::ActionSetMouseCursorPosition(const int x, const in
 {
 }
 
-ActionSetMouseCursorPosition::~ActionSetMouseCursorPosition()
-{
-}
-
 Task::StatusType ActionSetMouseCursorPosition::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	SetCursorPos(m_x, m_y);

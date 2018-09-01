@@ -18,7 +18,6 @@ class ActionIncrementIntegerVariable : public Action
 {
 public:
 	ActionIncrementIntegerVariable(const std::string& name);
-	virtual ~ActionIncrementIntegerVariable();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

@@ -6,10 +6,6 @@ ActionLogBlackboardContent::ActionLogBlackboardContent()
 {
 }
 
-ActionLogBlackboardContent::~ActionLogBlackboardContent()
-{
-}
-
 Task::StatusType ActionLogBlackboardContent::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	LOG_INFO("Blackboard entries:");

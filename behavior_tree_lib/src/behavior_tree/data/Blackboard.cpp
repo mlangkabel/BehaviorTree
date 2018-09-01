@@ -9,10 +9,6 @@ Blackboard::Blackboard(std::shared_ptr<Blackboard> parent)
 {
 }
 
-Blackboard::~Blackboard()
-{
-}
-
 bool Blackboard::getAsString(const std::string& key, std::string& value)
 {
 	ValueMap::const_iterator it = m_values.find(key);

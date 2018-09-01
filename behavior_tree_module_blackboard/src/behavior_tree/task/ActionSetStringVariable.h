@@ -18,7 +18,6 @@ class ActionSetStringVariable : public Action
 {
 public:
 	ActionSetStringVariable(const std::string& name, const std::string& value);
-	virtual ~ActionSetStringVariable();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 

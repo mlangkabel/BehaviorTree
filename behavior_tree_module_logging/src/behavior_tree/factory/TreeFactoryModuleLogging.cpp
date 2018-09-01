@@ -16,7 +16,3 @@ TreeFactoryModuleLogging::TreeFactoryModuleLogging()
 	addFactory(std::make_shared<ActionFactoryLogInfo>());
 	addFactory(std::make_shared<ActionFactoryLogWarning>());
 }
-
-TreeFactoryModuleLogging::~TreeFactoryModuleLogging()
-{
-}

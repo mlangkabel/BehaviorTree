@@ -7,10 +7,6 @@ ActionLogError::ActionLogError(const std::string &message)
 {
 }
 
-ActionLogError::~ActionLogError()
-{
-}
-
 Task::StatusType ActionLogError::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	LOG_ERROR(m_message);

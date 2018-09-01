@@ -14,7 +14,3 @@ TreeFactoryModuleKeyboard::TreeFactoryModuleKeyboard()
 	addFactory(std::make_shared<ActionFactorySimulateKeyDown>());
 	addFactory(std::make_shared<ActionFactorySimulateKeyUp>());
 }
-
-TreeFactoryModuleKeyboard::~TreeFactoryModuleKeyboard()
-{
-}

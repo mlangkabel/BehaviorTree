@@ -4,10 +4,6 @@ CompositeSequence::CompositeSequence()
 {
 }
 
-CompositeSequence::~CompositeSequence()
-{
-}
-
 Task::StatusType CompositeSequence::evaluate(std::shared_ptr<Blackboard> blackboard)
 {
 	StatusType status = STATUS_SUCCESS;

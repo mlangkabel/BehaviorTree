@@ -12,7 +12,7 @@ public:
 		STATUS_SUCCESS
 	};
 
-	virtual ~Task();
+	virtual ~Task() = default;
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard) = 0;
 };

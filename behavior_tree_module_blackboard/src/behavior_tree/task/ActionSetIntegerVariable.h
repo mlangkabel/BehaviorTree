@@ -18,7 +18,6 @@ class ActionSetIntegerVariable : public Action
 {
 public:
 	ActionSetIntegerVariable(const std::string& name, const int value);
-	virtual ~ActionSetIntegerVariable();
 
 	virtual StatusType evaluate(std::shared_ptr<Blackboard> blackboard);
 
