@@ -1,10 +1,11 @@
 #ifndef BLACKBOARD_H
 #define BLACKBOARD_H
 
+#include <iostream>
 #include <map>
 #include <memory>
 #include <string>
-#include <iostream>
+#include <vector>
 
 #include "utility/UtilityString.h"
 
@@ -24,6 +25,8 @@ public:
 	bool getAsString(const std::string& key, std::string& value);
 	bool exists(const std::string& key);
 	bool clear(const std::string& key);
+
+	std::vector<std::string> getKeys() const;
 
 private:
 	struct BlackboardData

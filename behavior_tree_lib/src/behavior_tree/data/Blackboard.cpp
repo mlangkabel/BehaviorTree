@@ -23,7 +23,7 @@ bool Blackboard::getAsString(const std::string& key, std::string& value)
 	}
 	if (m_parent)
 	{
-		return m_parent->get(key, value);
+		return m_parent->getAsString(key, value);
 	}
 	return false;
 }
@@ -43,4 +43,19 @@ bool Blackboard::clear(const std::string& key)
 		return true;
 	}
 	return false;
+}
+
+std::vector<std::string> Blackboard::getKeys() const
+{
+	std::vector<std::string> keys;
+	for (ValueMap::const_iterator it = m_values.begin(); it != m_values.end(); it++)
+	{
+		keys.push_back(it->first);
+	}
+	if (m_parent)
+	{
+		const std::vector<std::string> parentKeys = m_parent->getKeys();
+		keys.insert(keys.end(), parentKeys.begin(), parentKeys.end());
+	}
+	return keys;
 }

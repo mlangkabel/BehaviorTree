@@ -5,6 +5,7 @@
 #include "behavior_tree/task/ActionCheckVariableExists.h"
 #include "behavior_tree/task/ActionDecrementIntegerVariable.h"
 #include "behavior_tree/task/ActionIncrementIntegerVariable.h"
+#include "behavior_tree/task/ActionLogBlackboardContent.h"
 #include "behavior_tree/task/ActionSetIntegerVariable.h"
 #include "behavior_tree/task/ActionSetStringVariable.h"
 
@@ -19,6 +20,7 @@ TreeFactoryModuleBlackboard::TreeFactoryModuleBlackboard()
 	addFactory(std::make_shared<ActionFactoryCheckVariableExists>());
 	addFactory(std::make_shared<ActionFactoryDecrementIntegerVariable>());
 	addFactory(std::make_shared<ActionFactoryIncrementIntegerVariable>());
+	addFactory(std::make_shared<ActionFactoryLogBlackboardContent>());
 	addFactory(std::make_shared<ActionFactorySetIntegerVariable>());
 	addFactory(std::make_shared<ActionFactorySetStringVariable>());
 }

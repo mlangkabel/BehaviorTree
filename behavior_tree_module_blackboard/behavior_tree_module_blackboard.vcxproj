@@ -24,6 +24,7 @@
     <ClCompile Include="src\behavior_tree\task\ActionCheckVariableEquals.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionDecrementIntegerVariable.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionIncrementIntegerVariable.cpp" />
+    <ClCompile Include="src\behavior_tree\task\ActionLogBlackboardContent.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionSetIntegerVariable.cpp" />
     <ClCompile Include="src\behavior_tree\task\ActionSetStringVariable.cpp" />
   </ItemGroup>
@@ -33,6 +34,7 @@
     <ClInclude Include="src\behavior_tree\task\ActionCheckVariableEquals.h" />
     <ClInclude Include="src\behavior_tree\task\ActionDecrementIntegerVariable.h" />
     <ClInclude Include="src\behavior_tree\task\ActionIncrementIntegerVariable.h" />
+    <ClInclude Include="src\behavior_tree\task\ActionLogBlackboardContent.h" />
     <ClInclude Include="src\behavior_tree\task\ActionSetIntegerVariable.h" />
     <ClInclude Include="src\behavior_tree\task\ActionSetStringVariable.h" />
   </ItemGroup>

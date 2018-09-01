@@ -51,7 +51,7 @@ public:
 	virtual std::shared_ptr<Task> create(std::map<std::string, std::string> parameters)
 	{
 		return std::shared_ptr<TaskType>(new TaskType(
-			Ututilityility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
+			utility::stringTo<T1>(parameters.find(getParameterNames()[0])->second),
 			utility::stringTo<T2>(parameters.find(getParameterNames()[1])->second),
 			utility::stringTo<T3>(parameters.find(getParameterNames()[2])->second),
 			utility::stringTo<T4>(parameters.find(getParameterNames()[3])->second),
